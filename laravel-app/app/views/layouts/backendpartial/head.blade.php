@@ -7,11 +7,17 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<title>Home | Backend</title>
+
 	<!-- Bootstrap style --->
-	{{HTML::style('assets/css/bootstrap.min.css')}}
-	{{HTML::style('assets/css/sb-admin.css')}}
-	{{HTML::style('assets/css/morris.css')}}
-	{{HTML::style('assets/css/font-awesome.min.css')}}
-	{{HTML::style('assets/css/backend.css')}}
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="assets/css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 </head>

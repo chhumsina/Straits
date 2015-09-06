@@ -20,6 +20,8 @@ class OhadminController extends \BaseController {
 	 * */
 	public function validate()
 	{
+        //dd(Hash::make('admin'));
+
 		// attempt to do the login
 		$auth = Auth::attempt(
 			array(
@@ -32,20 +34,18 @@ class OhadminController extends \BaseController {
 
 		$user = Auth::user();
 
-		if ($auth) {
-			if ($user->status == 1 && $user->use_type == 1) {
-				return Redirect::to('backend');
-			} else {
-				$sms = 'This account not yet active!';
-				Auth::logout();
-			}
+        if ($auth) {
+            return Redirect::to('backend');
+        }
 
-		}
 		// validation not successful, send back to form
 
-		return Redirect::to('/')
-			->withInput(Input::except('password'))
-			->with('flash_notice_error', $sms);
+        $msgs = array();
+        $msg = array('type'=>'error','msg'=>$sms);
+        array_push($msgs,$msg);
+        return Redirect::to('/straits_admin')
+            ->withInput()
+            ->with('msgs', $msgs);
 
 	}
 }

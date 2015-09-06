@@ -50,7 +50,7 @@ App::after(function($request, $response)
 Route::filter('auth', function()
 {
 	if (Auth::guest())
-		return Redirect::guest('/')
+		return Redirect::guest('straits_admin')
 			->with('flash_notice', 'You must be logged in to view this page!');
 	// if (Auth::guest()) return Redirect::guest('login');
 });
@@ -86,7 +86,7 @@ Route::filter('guest', function()
 {
 	if (Auth::check()) return Redirect::to('/');
 });*/
-Route::filter('ohadmin', function()
+Route::filter('straits_admin', function()
 {
 	if (Auth::check()) {
 		return Redirect::to('backend');

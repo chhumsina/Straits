@@ -18,7 +18,7 @@
 
 Route::get('backend', array('before' => 'guest', function() {
 
-	return View::make('/');
+	return View::make('straits_admin');
 }));
 
 Route::get('/', 'HomeController@welcome');

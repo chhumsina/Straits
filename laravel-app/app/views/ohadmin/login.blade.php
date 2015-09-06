@@ -1,6 +1,5 @@
 @section('title', 'List Announcement')
 @section('content')
-
 	<?php echo Form::open(array('url' => '/straits_admin', 'role' => 'form')) ?>
 		<fieldset>
 			<div class="form-group">
