@@ -1,46 +1,51 @@
 <?php
 
-class MemberController extends \BaseController {
+class ArticleController extends \BaseController {
 
 	/**
 	 * The layout that should be used for responses.
 	 */
 	protected $layout = 'layouts.backend';
-	
-	public function lists()
-	{
-		$query = Member::where('use_type',2);
-		$n = 20;
-		$members = $query->paginate($n);
 
-		$this->layout->content = View::make('backend.member.list',compact('members'));
-	}
-
-	public function search()
+	public function index()
 	{
+        $db = Article::orderBy('created_at','DESC')->where('status','approve');
 		$inputs = Input::all();
-		$username = $inputs['username'];
-		$email = $inputs['email'];
-		$status = $inputs['status'];
 
-		$query = Member::where('use_type', '=', '2');
-
-		// Adds a clause to the query
-		if ($username) {
-			$query->where('username', 'LIKE', "%$username%");
+		if (Input::has('title')) {
+			$db->where('title', 'LIKE', "%".$inputs['title']."%");
 		}
-		if ($email) {
-			$query->where('email', 'LIKE', "%$email%");
-		}
-		if (Input::has('status')) {
-			$query->where('status', 'LIKE', "%$status%");
-		}
+        if (Input::has('type')) {
+            $db->where('type',$inputs['type']);
+        }
+        if (Input::has('status')) {
+            $db->where('status',$inputs['status']);
+        }
 
-		$n = 2;
-		$members = $query->paginate($n)->appends($inputs);
-
-		$this->layout->content = View::make('backend.member.list', compact('members'));
+		$n = 15;
+		$articles = $db->paginate($n)->appends($inputs);
+        $title = 'Article';
+		$this->layout->content = View::make('backend.article.index', compact('articles','title'));
 	}
+
+    public function delete($id)
+    {
+        $msgs = array();
+        $db = Article::where('id', $id)->delete();
+        if($db){
+            $msg = array('type'=>'success','msg'=>'Delete success fully');
+            array_push($msgs,$msg);
+            return Redirect::back()
+                ->with('msgs', $msgs);
+        }else{
+            $msg = array('type'=>'error','msg'=>'This record cannot delete!');
+            array_push($msgs,$msg);
+            return Redirect::back()
+                ->with('msgs', $msgs);
+        }
+
+        $this->layout->content = View::make('backend.member.edit', compact('member'));
+    }
 
 	/**
 	 * Store a newly created resource in storage.

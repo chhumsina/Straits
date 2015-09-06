@@ -68,15 +68,16 @@ Route::group(array('before' => 'auth'), function() {
     // backend
 	Route::get('backend', 'BackendController@dashboard');
 
-	Route::get('backend/member', 'MemberController@lists');
-	Route::post('backend/member', 'MemberController@search');
+	Route::get('backend/article', 'ArticleController@index');
+	Route::post('backend/article', 'ArticleController@index');
 
-    Route::get('backend/member/edit/{slug}', 'MemberController@edit');
-    Route::post('backend/member/edit', 'MemberController@update');
+    Route::get('backend/article/edit/{id}', 'ArticleController@edit');
+    Route::get('backend/article/delete/{id}', 'ArticleController@delete');
+    Route::post('backend/article/edit', 'ArticleController@update');
 
 
-	Route::resource('member', 'MemberController');
-	Route::when('member*', 'member');
+	Route::resource('article', 'ArticleController');
+	Route::when('article*', 'article');
 
     // Category Management
     Route::get('backend/category/list', 'CategoryMgController@index');

@@ -122,7 +122,7 @@ $baseUrl = URL::to('/');
 				<a href="{{$baseUrl}}/backend"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
 			</li>
 			<li>
-				<a href="{{$baseUrl}}/backend/member"><i class="fa fa-fw fa-bar-chart-o"></i> Member</a>
+				<a href="{{$baseUrl}}/backend/article"><i class="fa fa-fw fa-bar-chart-o"></i> Article</a>
 			</li>
 			<li>
 				<a href="{{$baseUrl}}/backend/post"><i class="fa fa-fw fa-table"></i> Post</a>
