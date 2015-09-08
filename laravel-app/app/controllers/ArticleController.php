@@ -28,6 +28,53 @@ class ArticleController extends \BaseController {
 		$this->layout->content = View::make('backend.article.index', compact('articles','title'));
 	}
 
+    public function create()
+    {
+        $title = 'Article';
+        $this->layout->content = View::make('backend.article.create', compact('title'));
+    }
+
+    public function store(){
+        $msgs = array();
+        $data =  Input::except(array('_token')) ;
+        $rule  =  array(
+            'title'   => 'required',
+        ) ;
+
+        $inputs = Input::all();
+
+        $validator = Validator::make($data,$rule);
+
+        if ($validator->passes()) {
+            if (Input::has('submit')) {
+                $data = array(
+                                "title"=>$inputs['title'],
+                                "image"=>$inputs['image'],
+                                "description"=>$inputs['description'],
+                                "status"=>$inputs['status'],
+                                "type"=>$inputs['type'],
+                              );
+
+                $article = Article::create($data);
+                if($article){
+                    $msg = array('type'=>'success','msg'=>'create success!');
+                    array_push($msgs,$msg);
+                    return Redirect::to('backend/article')
+                        ->with('msgs', $msgs);
+                }else{
+                    $msg = array('type'=>'error','msg'=>'cannot create!');
+                    array_push($msgs,$msg);
+                    return Redirect::back()
+                        ->with('msgs', $msgs);
+                }
+            }
+        }
+        return Redirect::back()
+            ->withInput()
+            ->withErrors($validator)
+            ->with('msgs', $msgs);
+    }
+
     public function delete($id)
     {
         $msgs = array();
@@ -47,29 +94,31 @@ class ArticleController extends \BaseController {
         $this->layout->content = View::make('backend.member.edit', compact('member'));
     }
 
-	/**
-	 * Store a newly created resource in storage.
-	 * POST /customercall
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
+    public function detail($id)
+    {
+        $article = Article::find($id);
+        if(empty($article)){
+            $msgs = array();
+            $msg = array('type'=>'error','msg'=>'Invalide url!');
+            array_push($msgs,$msg);
+            return Redirect::to('backend/article')
+                ->with('msgs', $msgs);
+        }
+        $this->layout->content = View::make('backend.article.detail', compact('article'));
+    }
 
-	/**
-	 * Display the specified resource.
-	 * GET /customercall/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($slug)
-	{
-		$member = Member::whereUsername($slug)->first();
-		$this->layout->content = View::make('backend.member.edit', compact('member'));
-	}
+    public function edit($id)
+    {
+        $article = Article::find($id);
+        if(empty($article)){
+            $msgs = array();
+            $msg = array('type'=>'error','msg'=>'Invalide url!');
+            array_push($msgs,$msg);
+            return Redirect::to('backend/article')
+                ->with('msgs', $msgs);
+        }
+        $this->layout->content = View::make('backend.article.edit', compact('article'));
+    }
 
 	public function update()
 	{

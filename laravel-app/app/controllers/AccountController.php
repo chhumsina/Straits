@@ -64,9 +64,9 @@ class AccountController extends \BaseController {
 		}
 
 		return Redirect::back()
-			->withInput()
-			->withErrors($validator)
-			->with('msgs', $msgs);
+        ->withInput()
+        ->withErrors($validator)
+        ->with('msgs', $msgs);
 	}
 
 	// Confirm email

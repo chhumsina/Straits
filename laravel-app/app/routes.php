@@ -71,8 +71,11 @@ Route::group(array('before' => 'auth'), function() {
 	Route::get('backend/article', 'ArticleController@index');
 	Route::post('backend/article', 'ArticleController@index');
 
+    Route::get('backend/article/create', 'ArticleController@create');
+    Route::post('backend/article/store', 'ArticleController@store');
     Route::get('backend/article/edit/{id}', 'ArticleController@edit');
     Route::get('backend/article/delete/{id}', 'ArticleController@delete');
+    Route::get('backend/article/detail/{id}', 'ArticleController@detail');
     Route::post('backend/article/edit', 'ArticleController@update');
 
 

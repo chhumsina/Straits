@@ -22,6 +22,7 @@ $baseUrl = URL::to('/');
     <link href="{{$baseUrl}}/assets/css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="{{$baseUrl}}/assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{$baseUrl}}/assets/css/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="{{$baseUrl}}/assets/plugin/rte/index.css" rel="stylesheet" type="text/css">
 
 </head>
