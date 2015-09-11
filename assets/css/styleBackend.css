@@ -1,0 +1,42 @@
+.approve {
+     display: inline-block;
+     min-width: 10px;
+     padding: 3px 7px;
+     font-size: 12px;
+     font-weight: 700;
+     line-height: 1;
+     color: #fff;
+     text-align: center;
+     white-space: nowrap;
+     vertical-align: baseline;
+     background-color: #008000;
+     border-radius: 3px;
+     padding: 10px;
+ }
+
+.pending {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: orange;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.badge{
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 10px 0 20px;
+    border-bottom: 1px solid #eee;
+}

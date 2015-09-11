@@ -1,3 +1,6 @@
+<?php
+$baseUrl = URL::to('/');
+?>
 <!--start footer-->
 <footer class="footer">
     <div class="container">
@@ -88,23 +91,23 @@
     </div>
 </section>
 
-<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
-<script src="assets/js/bootstrap.js"></script>
-<script src="assets/js/jquery.easing.1.3.js"></script>
-<script src="assets/js/retina-1.1.0.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.cookie.js"></script> <!-- jQuery cookie -->
-<script type="text/javascript" src="assets/js/styleswitch.js"></script> <!-- Style Colors Switcher -->
-<script src="assets/js/jquery.smartmenus.min.js"></script>
-<script src="assets/js/jquery.smartmenus.bootstrap.min.js"></script>
-<script src="assets/js/jquery-scrolltofixed-min.js"></script>
-<script charset="utf-8" type="text/javascript" src="assets/js/jquery.fractionslider.js"></script>
-<script type="text/javascript" src="assets/js/jquery.jcarousel.js"></script>
-<script type="text/javascript" src="assets/js/jflickrfeed.js"></script>
-<script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery.isotope.min.js"></script>
-<script type="text/javascript" src="assets/js/swipe.js"></script>
-<script type="text/javascript" src="assets/js/rainyday.js"></script>
-<script src="assets/js/main.js"></script>
+<script type="text/javascript" src="{{$baseUrl}}/assets/js/jquery-1.10.2.min.js"></script>
+<script src="{{$baseUrl}}/assets/js/bootstrap.js"></script>
+<script src="{{$baseUrl}}/assets/js/jquery.easing.1.3.js"></script>
+<script src="{{$baseUrl}}/assets/js/retina-1.1.0.min.js"></script>
+<script type="text/javascript" src="{{$baseUrl}}/assets/js/jquery.cookie.js"></script> <!-- jQuery cookie -->
+<script type="text/javascript" src="{{$baseUrl}}/assets/js/styleswitch.js"></script> <!-- Style Colors Switcher -->
+<script src="{{$baseUrl}}/assets/js/jquery.smartmenus.min.js"></script>
+<script src="{{$baseUrl}}/assets/js/jquery.smartmenus.bootstrap.min.js"></script>
+<script src="{{$baseUrl}}/assets/js/jquery-scrolltofixed-min.js"></script>
+<script charset="utf-8" type="text/javascript" src="{{$baseUrl}}/assets/js/jquery.fractionslider.js"></script>
+<script type="text/javascript" src="{{$baseUrl}}/assets/js/jquery.jcarousel.js"></script>
+<script type="text/javascript" src="{{$baseUrl}}/assets/js/jflickrfeed.js"></script>
+<script type="text/javascript" src="{{$baseUrl}}/assets/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="{{$baseUrl}}/assets/js/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="{{$baseUrl}}/assets/js/swipe.js"></script>
+<script type="text/javascript" src="{{$baseUrl}}/assets/js/rainyday.js"></script>
+<script src="{{$baseUrl}}/assets/js/main.js"></script>
 <script>
     $(window).load(function(){
         $('.slider').fractionSlider({

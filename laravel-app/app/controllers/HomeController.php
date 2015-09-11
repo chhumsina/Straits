@@ -9,10 +9,17 @@ class HomeController extends \BaseController {
 	/**
 	 * Display home page
 	 */
-	public function welcome()
+	public function index()
 	{
-		$this->layout->content = View::make('home.show');
+        $features = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','feature')->limit(6)->get();
+
+		$this->layout->content = View::make('home.index', compact('features'));
 	}
+
+    public function feature($id)
+    {
+        $this->layout->content = View::make('home.feature', compact(''));
+    }
 
 	/*
 	 * Validation

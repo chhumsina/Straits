@@ -4,25 +4,33 @@ $baseUrl = URL::to('/');
 ?>
 @section('content')
     @include('layouts.backendpartial.navigator')
-	<?php echo Form::open(array('url' => 'backend/article', 'role' => 'form', 'class'=>'form-inline')) ?>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="col-md-2">
-                    <label>Title:</label>
-                </div>
-                <div class="col-md-2">
-                    <?php $saleStaffId = ''; if (Input::has('sale_staff_id')){$id = Input::get('sale_staff_id');} ?>
-                    {{Form::text('title',Input::old('title'), array('class' => 'form-control'))}}
-                </div>
-            </div>
-        </div>
-	<?php echo Form::close() ?>
 
-	@if ($articles->count())
-        <?php $i = ($articles->getCurrentPage() - 1)* $articles->getPerPage(); ?>
 	<div class="row">
 		<div class="col-md-12">
-            <a href="{{$baseUrl}}/backend/article/create" class="btn btn-default">Create</a>
+            <div class="row">
+                <?php echo Form::open(array('url' => 'backend/article', 'role' => 'form', 'class'=>'form-inline')) ?>
+                <div class="col-md-10">
+                    <?php
+                        $types = array(''=>'Select Type','feature'=>'Feature', 'news'=>'News');
+                        $statuses = array(''=>'Select Status','approve'=>'Approve', 'pending'=>'Pending');
+
+                        $title = ''; if (Input::has('title')){$title = Input::get('title');}
+                        $status = ''; if (Input::has('status')){$status = Input::get('status');}
+                        $type = ''; if (Input::has('type')){$type = Input::get('type');}
+                    ?>
+                    {{Form::text('title',$title, array('class' => 'form-control', 'placeholder'=>'Title'))}}
+                    {{ Form::select('type', $types, $type, ['class' => 'form-control']) }}
+                    {{ Form::select('status', $statuses, $status, ['class' => 'form-control']) }}
+                    <input type="submit" value="Search" name="search" class="form-control"/>
+                </div>
+                <div class="col-md-2">
+                    <a href="{{$baseUrl}}/backend/article/create" class="btn btn-default pull-right">Create</a>
+                </div>
+            </div>
+            <?php echo Form::close() ?>
+            <br/>
+            @if ($articles->count())
+                <?php $i = ($articles->getCurrentPage() - 1)* $articles->getPerPage(); ?>
 			<div class="table-responsive">
 
 				<table id="mytable" class="table table-bordred table-striped">
@@ -44,9 +52,9 @@ $baseUrl = URL::to('/');
 						<tr>
 							<td>{{$i}}</td>
 							<td>{{$item->title}}</td>
-							<td><img style="width: 100px; height: 50px;" src="{{$baseUrl}}/assets/images/upload/{{$item->image}}" title="{{$item->image}}" alt="{{$item->image}}"/></td>
+							<td><img style="width: 100px; height: 33px;" src="{{$baseUrl}}/assets/images/upload/{{$item->image}}" title="{{$item->image}}" alt="{{$item->image}}"/></td>
 							<td><span class="badge">{{$item->type}}</span></td>
-							<td>{{$item->status}}</td>
+							<td><span  class="{{$item->status}}">{{$item->status}}</span></td>
 							<td>{{$item->created_at}}</td>
 							<td>
                                 <a class="btn btn-default" href="{{$baseUrl}}/backend/article/detail/{{$item->id}}" ><span class="fa fa-eye"></span></a>
@@ -66,11 +74,10 @@ $baseUrl = URL::to('/');
 				</span>
 
 			</div>
-
+            @else
+                There are no record!
+            @endif
 		</div>
 	</div>
 	</div>
-	@else
-			There are no record!
-	@endif
 @stop

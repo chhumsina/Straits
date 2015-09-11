@@ -21,7 +21,10 @@ Route::get('backend', array('before' => 'guest', function() {
 	return View::make('straits_admin');
 }));
 
-Route::get('/', 'HomeController@welcome');
+Route::get('/', 'HomeController@index');
+Route::get('latest-news', 'NewsController@index');
+Route::get('latest-news/detail/{id}', 'NewsController@detail');
+Route::get('feature/{id}', 'HomeController@feature');
 
 // Admin login
 Route::post('straits_admin', 'OhadminController@validate');

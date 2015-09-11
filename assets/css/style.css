@@ -1631,7 +1631,7 @@ td, th {
 /* ===================================================== */
 .our_team {  padding: 30px 0 60px;}
 .team-members .pic{border:none; overflow:hidden; text-align:center; }
-.portfolio_1 .pic {float:left; margin-right:30px; width:50%; position:relative;}
+.portfolio_1 .pic {float:left; margin-right:30px; width:30%; position:relative;}
 
 .portfolio_1.touching.medium:hover a.hover-zoom,
 .portfolio_1.touching.medium:hover a.hover-link
@@ -1962,7 +1962,7 @@ label{
 }
 .arrow-left.active:hover, .arrow-right.active:hover {background-color: #777;}
 .portfolio_1{
-    padding-bottom:60px;
+    padding-bottom:48px;
     border-bottom:1px solid #ddd;
 }
 

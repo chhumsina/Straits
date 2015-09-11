@@ -1,4 +1,7 @@
 <!--Start Header-->
+<?php
+$baseUrl = URL::to('/');
+?>
 <div id="top-fix" class="clearfix">
     <header id="header" class="container">
         <div class="row">
@@ -41,7 +44,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.html">Home</a> </li>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Latest News</a></li>
+                        <li><a href="{{$baseUrl}}/latest-news">Latest News</a></li>
                         <li><a href="#">Team Profile</a></li>
                         <li><a href="#">Contat us</a></li>
                         <li><a href="#">Map</a></li>

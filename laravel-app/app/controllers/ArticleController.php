@@ -9,7 +9,7 @@ class ArticleController extends \BaseController {
 
 	public function index()
 	{
-        $db = Article::orderBy('created_at','DESC')->where('status','approve');
+        $db = Article::orderBy('created_at','DESC');
 		$inputs = Input::all();
 
 		if (Input::has('title')) {
@@ -117,57 +117,48 @@ class ArticleController extends \BaseController {
             return Redirect::to('backend/article')
                 ->with('msgs', $msgs);
         }
-        $this->layout->content = View::make('backend.article.edit', compact('article'));
+        $title = 'Edit';
+        $this->layout->content = View::make('backend.article.edit', compact('article','title'));
     }
 
-	public function update()
-	{
-		$inputs = Input::all();
-		$msgs = array();
-		$id = $inputs['id'];
-		if(Input::has('active'))
-		{
-			DB::statement('UPDATE member SET status=0 WHERE status=1;');
-			$msg = array('type'=>'success','msg'=>'The account is inactive now!');
-			array_push($msgs,$msg);
-			return Redirect::back()
-				->with('msgs', $msgs);
-		}elseif(Input::has('inActive')){
-			DB::statement('UPDATE member SET status=1 WHERE status=0;');
-			$msg = array('type'=>'success','msg'=>'The account is active now!');
-			array_push($msgs,$msg);
-			return Redirect::back()
-				->with('msgs', $msgs);
+    public function update(){
+        $msgs = array();
+        $data =  Input::except(array('_token')) ;
+        $rule  =  array(
+            'title'   => 'required',
+        ) ;
 
-		}elseif(Input::has('submit')){
-			$nerd = Member::find($id);
-			$nerd->email      = Input::get('email');
-			$nerd->first_name = Input::get('first_name');
-			$nerd->last_name = Input::get('last_name');
-			$nerd->location = Input::get('location');
-			$nerd->phone = Input::get('phone');
-			$nerd->address = Input::get('address');
-			$nerd->save();
-			$msg = array('type'=>'success','msg'=>'The account is update successfully');
-			array_push($msgs,$msg);
-			return Redirect::back()
-				->with('msgs', $msgs);
-		}
-		$msg = array('type'=>'error','msg'=>':)');
-		array_push($msgs,$msg);
-		return Redirect::back()
-			->with('msgs', $msgs);
-	}
-	/**
-	 * Remove the specified resource from storage.
-	 * DELETE /customercall/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
+        $inputs = Input::all();
+
+        $validator = Validator::make($data,$rule);
+
+        if ($validator->passes()) {
+            if (Input::has('submit')) {
+                $article = Article::find($inputs['id']);
+                $article->title = Input::get('title');
+                $article->image = Input::get('image');
+                $article->description = Input::get('description');
+                $article->status = Input::get('status');
+                $article->type = Input::get('type');
+                $article->save();
+
+                if($article){
+                    $msg = array('type'=>'success','msg'=>'update success!');
+                    array_push($msgs,$msg);
+                    return Redirect::to('backend/article')
+                        ->with('msgs', $msgs);
+                }else{
+                    $msg = array('type'=>'error','msg'=>'cannot update!');
+                    array_push($msgs,$msg);
+                    return Redirect::back()
+                        ->with('msgs', $msgs);
+                }
+            }
+        }
+        return Redirect::back()
+            ->withInput()
+            ->withErrors($validator)
+            ->with('msgs', $msgs);
+    }
 
 }
