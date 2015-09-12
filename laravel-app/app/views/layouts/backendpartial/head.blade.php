@@ -10,7 +10,7 @@ $baseUrl = URL::to('/');
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Home | Backend</title>
+	<title>@yield('title')</title>
 
 	<!-- Bootstrap style --->
     <link rel="stylesheet" href="{{$baseUrl}}/assets/css/bootstrap.min.css">

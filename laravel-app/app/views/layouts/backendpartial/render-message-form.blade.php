@@ -1,12 +1,9 @@
 @if ($errors->any())
     <div class="row">
-				<div class="col-md-4 text-right"></div>
-			  	<div class="col-md-4 text-left">
+			  	<div class="col-md-4 text-left col-md-push-4">
 
-					    <div class="row">
-						    <ul>
-						        {{ implode('', $errors->all('<li class="error">:message</li>')) }}
-						    </ul>
+					    <div class="row render-error">
+						        {{ implode('', $errors->all('<div class="alert alert-danger">:message</div>')) }}
 						</div>
 			  	</div>
 			</div>

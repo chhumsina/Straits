@@ -42,14 +42,22 @@ class ArticleController extends \BaseController {
         ) ;
 
         $inputs = Input::all();
-
+        $imagename = '';
+        if (Input::hasFile('image')) {
+            $file = Input::file('image');
+            $destinationPath = public_path() . '/assets/images/upload/';
+            $millisecond = round(microtime(true) * 1000);
+            $imagename = strtolower($millisecond . '_' . str_random(2) . '_' . $file->getClientOriginalName());
+            $extension = $file->getClientOriginalExtension();
+            $uploadSuccess = $file->move($destinationPath, $imagename);
+        }
         $validator = Validator::make($data,$rule);
 
         if ($validator->passes()) {
             if (Input::has('submit')) {
                 $data = array(
                                 "title"=>$inputs['title'],
-                                "image"=>$inputs['image'],
+                                "image"=>$imagename,
                                 "description"=>$inputs['description'],
                                 "status"=>$inputs['status'],
                                 "type"=>$inputs['type'],
@@ -57,7 +65,7 @@ class ArticleController extends \BaseController {
 
                 $article = Article::create($data);
                 if($article){
-                    $msg = array('type'=>'success','msg'=>'create success!');
+                    $msg = array('type'=>'success','msg'=>'create successfully!');
                     array_push($msgs,$msg);
                     return Redirect::to('backend/article')
                         ->with('msgs', $msgs);
@@ -80,7 +88,7 @@ class ArticleController extends \BaseController {
         $msgs = array();
         $db = Article::where('id', $id)->delete();
         if($db){
-            $msg = array('type'=>'success','msg'=>'Delete success fully');
+            $msg = array('type'=>'success','msg'=>'Delete successfully');
             array_push($msgs,$msg);
             return Redirect::back()
                 ->with('msgs', $msgs);
@@ -124,19 +132,31 @@ class ArticleController extends \BaseController {
     public function update(){
         $msgs = array();
         $data =  Input::except(array('_token')) ;
-        $rule  =  array(
+        $rules  =  array(
             'title'   => 'required',
+            'description'   => 'required',
         ) ;
 
         $inputs = Input::all();
+        $imagename = '';
+        if (Input::hasFile('image')) {
+            $file = Input::file('image');
+            $destinationPath = public_path() . '/assets/images/upload/';
+            $millisecond = round(microtime(true) * 1000);
+            $imagename = strtolower($millisecond . '_' . str_random(2) . '_' . $file->getClientOriginalName());
+            $extension = $file->getClientOriginalExtension();
+            $uploadSuccess = $file->move($destinationPath, $imagename);
+        }
 
-        $validator = Validator::make($data,$rule);
+        $validation = Validator::make($inputs, $rules);
 
-        if ($validator->passes()) {
+        if ($validation->passes()) {
             if (Input::has('submit')) {
                 $article = Article::find($inputs['id']);
                 $article->title = Input::get('title');
-                $article->image = Input::get('image');
+                if (Input::hasFile('image')) {
+                    $article->image = $imagename;
+                }
                 $article->description = Input::get('description');
                 $article->status = Input::get('status');
                 $article->type = Input::get('type');
@@ -157,7 +177,7 @@ class ArticleController extends \BaseController {
         }
         return Redirect::back()
             ->withInput()
-            ->withErrors($validator)
+            ->withErrors($validation)
             ->with('msgs', $msgs);
     }
 

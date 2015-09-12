@@ -6,11 +6,11 @@ $baseUrl = URL::to('/');
     @include('layouts.backendpartial.navigator')
 
 	<div class="row">
-		<div class="col-md-12">
+        <div class="col-md-12">
             <div class="row">
-                <?php echo Form::open(array('url' => 'backend/article', 'role' => 'form', 'class'=>'form-inline')) ?>
+            <?php echo Form::open(array('url' => 'backend/article', 'role' => 'form', 'class'=>'form-inline')) ?>
                 <div class="col-md-10">
-                    <?php
+                <?php
                         $types = array(''=>'Select Type','feature'=>'Feature', 'news'=>'News');
                         $statuses = array(''=>'Select Status','approve'=>'Approve', 'pending'=>'Pending');
 
@@ -18,10 +18,10 @@ $baseUrl = URL::to('/');
                         $status = ''; if (Input::has('status')){$status = Input::get('status');}
                         $type = ''; if (Input::has('type')){$type = Input::get('type');}
                     ?>
-                    {{Form::text('title',$title, array('class' => 'form-control', 'placeholder'=>'Title'))}}
+                    {{Form::text('title',$title, array('class' => 'form-control', 'placeholder'=>'Title','style'=>' height: 34px; width: 50%;'))}}
                     {{ Form::select('type', $types, $type, ['class' => 'form-control']) }}
                     {{ Form::select('status', $statuses, $status, ['class' => 'form-control']) }}
-                    <input type="submit" value="Search" name="search" class="form-control"/>
+                    <input type="submit" value="Search" name="search" class="form-control" style=" height: 33px;margin-left: 9px;margin-top: -9px;"/>
                 </div>
                 <div class="col-md-2">
                     <a href="{{$baseUrl}}/backend/article/create" class="btn btn-default pull-right">Create</a>
@@ -57,9 +57,13 @@ $baseUrl = URL::to('/');
 							<td><span  class="{{$item->status}}">{{$item->status}}</span></td>
 							<td>{{$item->created_at}}</td>
 							<td>
-                                <a class="btn btn-default" href="{{$baseUrl}}/backend/article/detail/{{$item->id}}" ><span class="fa fa-eye"></span></a>
+                                @if($item->status == 'approve')
+                                    <a class="btn btn-default" href="{{$baseUrl}}/<?php if($item->type == 'news'){echo'latest-news';}else{echo'feature';}?>/detail/{{$item->id}}" target="_blank"><span class="fa fa-eye"></span></a>
+                                @else
+                                    <a class="btn btn-default alertPending" href="{{$baseUrl}}/<?php if($item->type == 'news'){echo'latest-news';}else{echo'feature';}?>/detail/{{$item->id}}" target="_blank"><span class="fa fa-eye"></span></a>
+                                @endif
                                 <a class="btn btn-default" href="{{$baseUrl}}/backend/article/edit/{{$item->id}}" ><span class="fa fa-edit"></span></a>
-                                <a class="btn btn-danger mgsDelete" href="{{$baseUrl}}/backend/article/delete/{{$item->id}}" ><span class="fa fa-trash"></span></a>
+                                <a class="btn btn-danger mgsDelete" href="{{$baseUrl}}/backend/article/delete/{{$item->id}}" ><span class="fa fa-remove">X</span></a>
                             </td>
 						</tr>
 					@endforeach

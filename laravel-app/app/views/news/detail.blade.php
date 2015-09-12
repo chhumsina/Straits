@@ -1,22 +1,14 @@
 @section('title', 'Detail')
 @section('content')
+    <?php
+    $baseUrl = URL::to('/');
+    ?>
     <div class="row">
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
             <div class="blog_large">
                 <article class="post">
                     <figure class="post_img">
-                        <!-- Post Image Slider -->
-                        <div id="slider" class="swipe">
-                            <ul class="swipe-wrap">
-                                <li><img src="images/blog/blog_2.png" alt="blog post"></li>
-                                <li><img src="images/blog/blog_1.png" alt="blog post"></li>
-                                <li><img src="images/blog/blog_3.png" alt="blog post"></li>
-                            </ul>
-                            <div class="swipe-navi">
-                                <div class="swipe-left" onclick="mySwipe.prev()"><i class="fa fa-chevron-left"></i></div>
-                                <div class="swipe-right" onclick="mySwipe.next()"><i class="fa fa-chevron-right"></i></div>
-                            </div>
-                        </div>
+                        <img src="{{$baseUrl}}/assets/images/upload/{{$item->image}}">
                     </figure>
                     <div class="post_date">
                         <span class="day">28</span>

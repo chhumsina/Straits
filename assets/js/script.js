@@ -7,6 +7,12 @@ $(document).ready(function(){
         }
     });
 
+    $(".alertPending").click(function(e){
+        alert("Unable to view Pending post.");
+        e.preventDefault();
+    });
+
+
 });
 
 

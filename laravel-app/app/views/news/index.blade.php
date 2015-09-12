@@ -1,4 +1,4 @@
-@section('title', 'Detail Dealer')
+@section('title', ucfirst(Request::segment(1))))
 @section('content')
     <?php
     $baseUrl = URL::to('/');
@@ -17,12 +17,9 @@
                             <div class="recent-item">
                                 <figure class="portfolio_1 touching medium">
                                     <div class="pic">
-                                        <img src="{{$baseUrl}}/assets/images/portfolio/portfolio_1_1.png" alt="" />
+                                        <img src="{{$baseUrl}}/assets/images/upload/{{$item->image}}" alt="" />
                                         <div class="skin-overlay"></div>
-                                        <a href="{{$baseUrl}}/assets/images/portfolio/full/portfolio_4.png" class="hover-zoom mfp-image" ><i class="fa fa-search"></i></a>
-                                        <a href="portfolio_single.html" class="hover-link">
-                                            <i class="fa fa-link"></i>
-                                        </a>
+                                        <a href="{{$baseUrl}}/assets/images/upload/{{$item->image}}" class="hover-zoom mfp-image" ><i class="fa fa-search"></i></a>
                                     </div>
 
                                     <figcaption class="item-description">

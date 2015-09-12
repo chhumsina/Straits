@@ -13,7 +13,7 @@ class NewsController extends \BaseController {
 	{
         $inputs = Input::all();
         $db = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','news');
-        $items = $db->paginate(1)->appends($inputs);
+        $items = $db->paginate(2)->appends($inputs);
 
 		$this->layout->content = View::make('news.index', compact('items'));
 	}

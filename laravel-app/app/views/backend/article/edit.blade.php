@@ -1,4 +1,4 @@
-@section('title', 'List Member')
+@section('title', ucfirst(Request::segment(2)).' - '.ucfirst(Request::segment(3)))
 @section('content')
     @include('layouts.backendpartial.navigator')
     <?php
@@ -6,7 +6,7 @@
     ?>
     <div class="container-page">
         <div class="col-md-12">
-            <?php echo Form::open(array('url' => 'backend/article/edit')) ?>
+            <?php echo Form::open(array('url' => 'backend/article/edit', 'files'=> true)) ?>
             <?php
             $types = array(''=>'Select Type','feature'=>'Feature', 'news'=>'News');
             $statuses = array(''=>'Select Status','approve'=>'Approve', 'pending'=>'Pending');
@@ -38,7 +38,7 @@
             </div>
 
             <div class="form-group col-lg-6">
-                <img id="blah" src="#" alt="Preview image here" width="200" height="200" />
+                <img id="blah" src="{{$baseUrl}}/assets/images/upload/{{$article->image}}" alt="Preview image here" width="200" height="200" />
             </div>
 
         </div>
@@ -48,6 +48,7 @@
         </div>
 
         <div class="col-md-12">
+            <br/>
             <input type="submit" value="Update" name="submit" class="form-control btn btn-primary"/>
         </div>
         <?php echo Form::close();?>
