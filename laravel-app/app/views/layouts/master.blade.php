@@ -32,6 +32,7 @@ $baseUrl = URL::to('/');
         </div>
     </section>
     <!--end info service-->
+    @include('layouts.partial.latest-news')
 </section>
 <!--end wrapper-->
 

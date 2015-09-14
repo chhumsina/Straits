@@ -7,7 +7,7 @@ $baseUrl = URL::to('/');
             <div class="carousel-intro">
                 <div class="col-md-12">
                     <div class="dividerHeading">
-                        <h4><span>Latest News{{$love}}</span></h4>
+                        <h4><span>Latest News</span></h4>
                     </div>
                     <div class="carousel-navi">
                         <div id="work-prev" class="arrow-left jcarousel-prev"><i class="fa fa-angle-left"></i></div>
@@ -16,7 +16,7 @@ $baseUrl = URL::to('/');
                     <div class="clearfix"></div>
                 </div>
             </div>
-
+{{var_dump($news)}}
             <div class="jcarousel recent-work-jc">
                 <ul class="jcarousel-list">
                     <!-- Recent Work Item -->

@@ -10,6 +10,7 @@ $baseUrl = URL::to('/');
 
     <!-- CSS FILES -->
     <link rel="stylesheet" href="{{$baseUrl}}/assets/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="{{$baseUrl}}/assets/css/equal-height-columns.css">-->
     <link rel="stylesheet" href="{{$baseUrl}}/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="{{$baseUrl}}/assets/css/style.css" media="screen" data-name="skins">
 
