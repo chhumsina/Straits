@@ -11,9 +11,11 @@ class HomeController extends \BaseController {
 	 */
 	public function index()
 	{
-        $features = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','feature')->limit(6)->get();
+        $shipping_agency = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','shipping_agency')->get();
+        $freight_forwarding = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','freight_forwarding')->get();
+        $other_services = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','other_services')->get();
 
-		$this->layout->content = View::make('home.index', compact('features'));
+		$this->layout->content = View::make('home.index', compact('shipping_agency','freight_forwarding','other_services'));
 	}
 
     public function feature($id)

@@ -23,7 +23,7 @@
                                     </div>
 
                                     <figcaption class="item-description">
-                                        <h5><a href="{{$baseUrl}}/latest-news/detail/{{$item->id}}" title="{{$item->title}}">{{$item->title}}</a></h5>
+                                        <h5><a href="{{$baseUrl}}/service/detail/{{$item->id}}" title="{{$item->title}}">{{$item->title}}</a></h5>
                                         <span><i class="fa fa-calendar"></i> &nbsp;&nbsp;{{date('d/M/Y H:m:s', strtotime($item->created_at))}} </span>
                                         <br/>
                                         <?php
@@ -31,7 +31,7 @@
 
                                             if (strlen($string) > 700) {
                                                 $stringCut = substr($string, 0, 700);
-                                                $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href="'.$baseUrl.'/latest-news/detail/'.$item->id.'" title="{{$item->title}}">Read More</a>';
+                                                $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href="'.$baseUrl.'/service/detail/'.$item->id.'" title="{{$item->title}}">Read More</a>';
                                             }
                                             echo $string;
                                         ?>

@@ -40,7 +40,7 @@
             <div class="sidebar">
                 <div class="widget widget_search">
                     <div class="site-search-area">
-                        <?php echo Form::open(array('url' => $baseUrl.'/latest-news','id'=>'site-searchform')) ?>
+                        <?php echo Form::open(array('url' => $baseUrl.'/service','id'=>'site-searchform')) ?>
                             <div>
                                 <input type="text" placeholder="Enter Search keywords..." id="s" name="title" class="input-text">
                                 <input type="submit" value="Search" id="searchsubmit">
@@ -55,7 +55,7 @@
                     </div>
                     <ul class="arrows_list list_style">
                         @foreach($items as $item)
-                            <li><a href="{{$baseUrl}}/latest-news/detail/{{$item->id}}" title="{{$item->title}}">{{$item->title}}</a></li>
+                            <li><a href="{{$baseUrl}}/service/detail/{{$item->id}}" title="{{$item->title}}">{{$item->title}}</a></li>
                         @endforeach
                     </ul>
                 </div>

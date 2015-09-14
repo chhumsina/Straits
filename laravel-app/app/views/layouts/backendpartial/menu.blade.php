@@ -125,7 +125,7 @@ $baseUrl = URL::to('/');
 				<a href="{{$baseUrl}}/backend/article"><i class="fa fa-fw fa-bar-chart-o"></i> Article</a>
 			</li>
 			<li>
-				<a href="{{$baseUrl}}/backend/post"><i class="fa fa-fw fa-table"></i> Post</a>
+				<a href="{{$baseUrl}}/backend/service"><i class="fa fa-fw fa-table"></i> Service</a>
 			</li>
 			<li>
 				<a href="{{$baseUrl}}/backend/category"><i class="fa fa-fw fa-edit"></i> Category</a>

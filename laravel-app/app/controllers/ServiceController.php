@@ -1,6 +1,6 @@
 <?php
 
-class ArticleController extends \BaseController {
+class ServiceController extends \BaseController {
 
 	/**
 	 * The layout that should be used for responses.
@@ -9,7 +9,7 @@ class ArticleController extends \BaseController {
 
 	public function index()
 	{
-        $db = Article::orderBy('created_at','DESC')->whereIn('type',array('news'));
+        $db = Article::orderBy('created_at','DESC')->whereIn('type',array('shipping_agency','freight_forwarding','other_services'));
 		$inputs = Input::all();
 
 		if (Input::has('title')) {
@@ -24,14 +24,14 @@ class ArticleController extends \BaseController {
 
 		$n = 15;
 		$articles = $db->paginate($n)->appends($inputs);
-        $title = 'Article';
-		$this->layout->content = View::make('backend.article.index', compact('articles','title'));
+        $title = 'Service';
+		$this->layout->content = View::make('backend.service.index', compact('articles','title'));
 	}
 
     public function create()
     {
-        $title = 'Article';
-        $this->layout->content = View::make('backend.article.create', compact('title'));
+        $title = 'Service';
+        $this->layout->content = View::make('backend.service.create', compact('title'));
     }
 
     public function store(){
@@ -67,7 +67,7 @@ class ArticleController extends \BaseController {
                 if($article){
                     $msg = array('type'=>'success','msg'=>'create successfully!');
                     array_push($msgs,$msg);
-                    return Redirect::to('backend/article')
+                    return Redirect::to('backend/service')
                         ->with('msgs', $msgs);
                 }else{
                     $msg = array('type'=>'error','msg'=>'cannot create!');
@@ -109,10 +109,10 @@ class ArticleController extends \BaseController {
             $msgs = array();
             $msg = array('type'=>'error','msg'=>'Invalide url!');
             array_push($msgs,$msg);
-            return Redirect::to('backend/article')
+            return Redirect::to('backend/service')
                 ->with('msgs', $msgs);
         }
-        $this->layout->content = View::make('backend.article.detail', compact('article'));
+        $this->layout->content = View::make('backend.service.detail', compact('article'));
     }
 
     public function edit($id)
@@ -122,11 +122,11 @@ class ArticleController extends \BaseController {
             $msgs = array();
             $msg = array('type'=>'error','msg'=>'Invalide url!');
             array_push($msgs,$msg);
-            return Redirect::to('backend/article')
+            return Redirect::to('backend/service')
                 ->with('msgs', $msgs);
         }
         $title = 'Edit';
-        $this->layout->content = View::make('backend.article.edit', compact('article','title'));
+        $this->layout->content = View::make('backend.service.edit', compact('article','title'));
     }
 
     public function update(){
@@ -165,7 +165,7 @@ class ArticleController extends \BaseController {
                 if($article){
                     $msg = array('type'=>'success','msg'=>'update success!');
                     array_push($msgs,$msg);
-                    return Redirect::to('backend/article')
+                    return Redirect::to('backend/service')
                         ->with('msgs', $msgs);
                 }else{
                     $msg = array('type'=>'error','msg'=>'cannot update!');

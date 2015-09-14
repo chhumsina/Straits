@@ -2471,7 +2471,6 @@ a.read:after {
     padding: 15px 15px 25px;
     margin:0 auto;
     text-align: center;
-    cursor: pointer;
     background:#f4f4f4;
 }
 
@@ -3902,4 +3901,9 @@ ul{
         float:left;
     }
     .author_bio{margin-top:51%;}
+}
+
+.text-left-custom {
+    text-align: left;
+    padding-left: 15px;
 }

@@ -23,7 +23,13 @@ Route::get('backend', array('before' => 'guest', function() {
 
 Route::get('/', 'HomeController@index');
 Route::get('latest-news', 'NewsController@index');
+Route::post('latest-news', 'NewsController@index');
 Route::get('latest-news/detail/{id}', 'NewsController@detail');
+
+Route::get('service', 'HomeServiceController@index');
+Route::post('service', 'HomeServiceController@index');
+Route::get('service/detail/{id}', 'HomeServiceController@detail');
+
 Route::get('feature/{id}', 'HomeController@feature');
 
 // Admin login
@@ -73,13 +79,21 @@ Route::group(array('before' => 'auth'), function() {
 
 	Route::get('backend/article', 'ArticleController@index');
 	Route::post('backend/article', 'ArticleController@index');
-
     Route::get('backend/article/create', 'ArticleController@create');
     Route::post('backend/article/store', 'ArticleController@store');
     Route::get('backend/article/edit/{id}', 'ArticleController@edit');
     Route::get('backend/article/delete/{id}', 'ArticleController@delete');
     Route::get('backend/article/detail/{id}', 'ArticleController@detail');
     Route::post('backend/article/edit', 'ArticleController@update');
+
+    Route::get('backend/service', 'ServiceController@index');
+    Route::post('backend/service', 'ServiceController@index');
+    Route::get('backend/service/create', 'ServiceController@create');
+    Route::post('backend/service/store', 'ServiceController@store');
+    Route::get('backend/service/edit/{id}', 'ServiceController@edit');
+    Route::get('backend/service/delete/{id}', 'ServiceController@delete');
+    Route::get('backend/service/detail/{id}', 'ServiceController@detail');
+    Route::post('backend/service/edit', 'ServiceController@update');
 
 
 	Route::resource('article', 'ArticleController');
