@@ -22,6 +22,7 @@ Route::get('backend', array('before' => 'guest', function() {
 }));
 
 Route::get('/', 'HomeController@index');
+Route::get('map', 'HomeController@map');
 Route::get('latest-news', 'NewsController@index');
 Route::post('latest-news', 'NewsController@index');
 Route::get('latest-news/detail/{id}', 'NewsController@detail');

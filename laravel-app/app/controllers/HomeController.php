@@ -25,6 +25,9 @@ class HomeController extends \BaseController {
         $this->layout->content = View::make('home.feature', compact(''));
     }
 
+    public function map(){
+        $this->layout->content = View::make('home.map', compact(''));
+    }
 	/*
 	 * Validation
 	 *
