@@ -1,6 +1,6 @@
 <?php
 
-class HomeServiceController extends \BaseController {
+class HomeAboutUsController extends \BaseController {
 	/*
 	 * The layout that should be used for responses.
 	 */
@@ -12,7 +12,7 @@ class HomeServiceController extends \BaseController {
 	public function index()
 	{
         $inputs = Input::all();
-        $db = Article::orderBy('created_at', 'DESC')->where('status','approve')->whereIn('type',array('shipping_agency','freight_forwarding','other_services'));
+        $db = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','about_us');
         if(Input::has('title')){
             $db->where('title', 'LIKE', "%".$inputs['title']."%");
         }
@@ -24,9 +24,9 @@ class HomeServiceController extends \BaseController {
     public function detail($id)
     {
         $item = Article::where('status','approve')->where('id',$id)->first();
-        $items = Article::where('status','approve')->whereIn('type',array('shipping_agency','freight_forwarding','other_services'))->limit(15)->get();
+        $items = Article::where('status','approve')->where('type','about_us')->limit(15)->get();
 
-        $this->layout->content = View::make('service.detail', compact('item','items'));
+        $this->layout->content = View::make('about-us.detail', compact('item','items'));
     }
 
 }

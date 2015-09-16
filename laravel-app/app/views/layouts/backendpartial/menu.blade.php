@@ -127,12 +127,12 @@ $baseUrl = URL::to('/');
 			<li>
 				<a href="{{$baseUrl}}/backend/service"><i class="fa fa-fw fa-table"></i> Service</a>
 			</li>
-			<li>
-				<a href="{{$baseUrl}}/backend/category"><i class="fa fa-fw fa-edit"></i> Category</a>
-			</li>
-			<li>
-				<a href="{{$baseUrl}}/backend/ads"><i class="fa fa-fw fa-edit"></i> Advertisement</a>
-			</li>
+            <li>
+                <a href="{{$baseUrl}}/backend/about-us"><i class="fa fa-fw fa-table"></i> About Us</a>
+            </li>
+            <li>
+                <a href="{{$baseUrl}}/backend/team-profile"><i class="fa fa-fw fa-table"></i> Team Profile</a>
+            </li>
 		</ul>
 	</div>
 	<!-- /.navbar-collapse -->

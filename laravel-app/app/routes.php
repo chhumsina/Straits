@@ -31,6 +31,10 @@ Route::get('service', 'HomeServiceController@index');
 Route::post('service', 'HomeServiceController@index');
 Route::get('service/detail/{id}', 'HomeServiceController@detail');
 
+Route::get('about-us/detail/{id}', 'HomeAboutUsController@detail');
+Route::get('about-us', 'HomeAboutUsController@index');
+Route::post('about-us', 'HomeAboutUsController@index');
+
 Route::get('feature/{id}', 'HomeController@feature');
 
 // Admin login
@@ -87,6 +91,15 @@ Route::group(array('before' => 'auth'), function() {
     Route::get('backend/article/detail/{id}', 'ArticleController@detail');
     Route::post('backend/article/edit', 'ArticleController@update');
 
+    Route::get('backend/about-us', 'AboutUsController@index');
+    Route::post('backend/about-us', 'AboutUsController@index');
+    Route::get('backend/about-us/create', 'AboutUsController@create');
+    Route::post('backend/about-us/store', 'AboutUsController@store');
+    Route::get('backend/about-us/edit/{id}', 'AboutUsController@edit');
+    Route::get('backend/about-us/delete/{id}', 'AboutUsController@delete');
+    Route::get('backend/about-us/detail/{id}', 'AboutUsController@detail');
+    Route::post('backend/about-us/edit', 'AboutUsController@update');
+
     Route::get('backend/service', 'ServiceController@index');
     Route::post('backend/service', 'ServiceController@index');
     Route::get('backend/service/create', 'ServiceController@create');
@@ -96,8 +109,17 @@ Route::group(array('before' => 'auth'), function() {
     Route::get('backend/service/detail/{id}', 'ServiceController@detail');
     Route::post('backend/service/edit', 'ServiceController@update');
 
+    Route::get('backend/team-profile', 'TeamProfileController@index');
+    Route::post('backend/team-profile', 'TeamProfileController@index');
+    Route::get('backend/team-profile/create', 'TeamProfileController@create');
+    Route::post('backend/team-profile/store', 'TeamProfileController@store');
+    Route::get('backend/team-profile/edit/{id}', 'TeamProfileController@edit');
+    Route::get('backend/team-profile/delete/{id}', 'TeamProfileController@delete');
+    Route::get('backend/team-profile/detail/{id}', 'TeamProfileController@detail');
+    Route::post('backend/team-profile/edit', 'TeamProfileController@update');
 
-	Route::resource('article', 'ArticleController');
+
+    Route::resource('article', 'ArticleController');
 	Route::when('article*', 'article');
 
     // Category Management

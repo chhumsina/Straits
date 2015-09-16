@@ -68,31 +68,18 @@
                 <h4><span>About Us</span></h4>
             </div>
             <div class="row">
-                <div class="col-md-6 rec_blog">
-                    <div class="blogPic">
-                        <img src="{{$baseUrl}}/assets/images/upload/1441968373613_hc_capture.png" alt="" />
-                    </div>
-                    <div class="blogDetail">
-                        <div class="blogTitle">
-                            <a href="#">
-                                <h2>This title in post blogs sdfkdj fksjfdlsjfdlsfjd</h2>
-                            </a>
+                @foreach($about as $item)
+                    <div class="col-md-6 rec_blog">
+                        <div class="blogPic">
+                            <img src="{{$baseUrl}}/assets/images/upload/{{$item->image}}" title="{{$item->image}}" alt="{{$item->image}}"/>
+                        </div>
+                        <div class="blogDetail">
+                            <div class="blogTitle">
+                                <a href="{{$baseUrl}}/about-us/detail/{{$item->id}}" title="{{$item->title}}"><h2>{{$item->title}}</h2></a>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="col-md-6 rec_blog">
-                    <div class="blogPic">
-                        <img src="{{$baseUrl}}/assets/images/upload/1441968373613_hc_capture.png" alt="" />
-                    </div>
-                    <div class="blogDetail">
-                        <div class="blogTitle">
-                            <a href="#">
-                                <h2>This title in post blogs sdfkdj fksjfdlsjfdlsfjd</h2>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 
@@ -122,37 +109,6 @@
                     <a href="#testimonial-carousel" data-slide="next"><i class="fa fa-chevron-right"></i></a></div>
             </div>
         </div><!-- TESTIMONIALS END -->
-        <div class="col-lg-8 col-md-8 col-sm-8">
-            <div class="dividerHeading">
-            </div>
-            <div class="row">
-                <div class="col-md-6 rec_blog">
-                    <div class="blogPic">
-                        <img src="{{$baseUrl}}/assets/images/upload/1441968373613_hc_capture.png" alt="" />
-                    </div>
-                    <div class="blogDetail">
-                        <div class="blogTitle">
-                            <a href="#">
-                                <h2>This title in post blogs sdfkdj fksjfdlsjfdlsfjd</h2>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 rec_blog">
-                    <div class="blogPic">
-                        <img src="{{$baseUrl}}/assets/images/upload/1441968373613_hc_capture.png" alt="" />
-                    </div>
-                    <div class="blogDetail">
-                        <div class="blogTitle">
-                            <a href="#">
-                                <h2>This title in post blogs sdfkdj fksjfdlsjfdlsfjd</h2>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
 @stop

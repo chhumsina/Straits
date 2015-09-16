@@ -3911,3 +3911,12 @@ ul{
 .moreagency, .moreforwarding, .other{
     cursor: pointer;
 }
+
+.blogDetail {
+    border: 1px solid #f2f2f2;
+    display: inline-block;
+    padding: 15px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
