@@ -17,7 +17,7 @@ class HomeController extends \BaseController {
         $freight_forwarding = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','freight_forwarding')->get();
         $other_services = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','other_services')->get();
 
-        $about = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','about_us')->get();
+        $about = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','about_us')->limit(4)->get();
 
         $this->layout->content = View::make('home.index', compact('shipping_agency','freight_forwarding','other_services','about'));
 	}
@@ -30,6 +30,12 @@ class HomeController extends \BaseController {
     public function map(){
         $this->layout->content = View::make('home.map', compact(''));
     }
+
+    public function teamProfile(){
+        $items = TeamProfile::orderBy('created_at','DESC')->where('status','approve')->get();
+        $this->layout->content = View::make('home.team-profile', compact('items'));
+    }
+
 	/*
 	 * Validation
 	 *

@@ -23,9 +23,12 @@ Route::get('backend', array('before' => 'guest', function() {
 
 Route::get('/', 'HomeController@index');
 Route::get('map', 'HomeController@map');
+Route::get('team-profile', 'HomeController@teamProfile');
+
 Route::get('latest-news', 'NewsController@index');
 Route::post('latest-news', 'NewsController@index');
 Route::get('latest-news/detail/{id}', 'NewsController@detail');
+
 
 Route::get('service', 'HomeServiceController@index');
 Route::post('service', 'HomeServiceController@index');

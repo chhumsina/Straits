@@ -45,7 +45,7 @@ $baseUrl = URL::to('/');
                         <li class="active"><a href="index.html">Home</a> </li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="{{$baseUrl}}/latest-news">Latest News</a></li>
-                        <li><a href="#">Team Profile</a></li>
+                        <li><a href="{{$baseUrl}}/team-profile">Team Profile</a></li>
                         <li><a href="#">Contat us</a></li>
                         <li><a href="{{$baseUrl}}/map">Map</a></li>
 

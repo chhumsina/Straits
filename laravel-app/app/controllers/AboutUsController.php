@@ -9,6 +9,8 @@ class AboutUsController extends \BaseController {
 
 	public function index()
 	{
+        $article = Article::orderBy('created_at','DESC')->whereIn('type',array('about_content'))->first();
+
         $db = Article::orderBy('created_at','DESC')->whereIn('type',array('about_us'));
 		$inputs = Input::all();
 
@@ -25,7 +27,7 @@ class AboutUsController extends \BaseController {
 		$n = 15;
 		$articles = $db->paginate($n)->appends($inputs);
         $title = 'About Us';
-		$this->layout->content = View::make('backend.about-us.index', compact('articles','title'));
+		$this->layout->content = View::make('backend.about-us.index', compact('articles','article','title'));
 	}
 
     public function create()

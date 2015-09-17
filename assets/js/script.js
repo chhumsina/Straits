@@ -42,3 +42,11 @@ $(document).ready( function() {
 $(document).submit( function() {
     $("#txtEditor").val($('.Editor-editor').html());
 });
+
+
+$("#editAbout").click(function(){
+    $(".about-content").slideToggle("slow");
+    $('html, body').delay('200').animate({
+        scrollTop: $(this).offset().top - 70
+    }, 200);
+});

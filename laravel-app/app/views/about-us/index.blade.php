@@ -3,7 +3,37 @@
     <?php
     $baseUrl = URL::to('/');
     ?>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="who">
+                <div class="col-md-6" style="margin-left: -15px">
+                    <div class="img-about">
+                        <div class="swipe" id="slider" style="visibility: visible;">
+                            <ul class="swipe-wrap" style="width: 1665px;">
+                                <li style="width: 555px; left: 0px; transition-duration: 400ms; transform: translateX(-555px);" data-index="0"><img src="{{$baseUrl}}/assets/images/upload/{{$article->image}}" alt="{{$article->title}}" /></li>
+                            </ul>
+                            <div class="swipe-navi">
+                                <div onclick="mySwipe.prev()" class="swipe-left"><i class="fa fa-chevron-left"></i></div>
+                                <div onclick="mySwipe.next()" class="swipe-right"><i class="fa fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-md-6">
+                    <div class="dividerHeading">
+                        <h4><span>{{$article->title}}</span></h4>
+
+                    </div>
+                    {{$article->description}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="dividerHeading">
+        <h4></h4>
+    </div>
     <div class="row">
         <!--begin isotope -->
         @if ($items->count())
@@ -23,7 +53,7 @@
                                     </div>
 
                                     <figcaption class="item-description">
-                                        <h5><a href="{{$baseUrl}}/service/detail/{{$item->id}}" title="{{$item->title}}">{{$item->title}}</a></h5>
+                                        <h5><a href="{{$baseUrl}}/about-us/detail/{{$item->id}}" title="{{$item->title}}">{{$item->title}}</a></h5>
                                         <span><i class="fa fa-calendar"></i> &nbsp;&nbsp;{{date('d/M/Y H:m:s', strtotime($item->created_at))}} </span>
                                         <br/>
                                         <?php
