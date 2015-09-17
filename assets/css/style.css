@@ -3920,3 +3920,14 @@ ul{
     width: 100%;
     margin-bottom: 30px;
 }
+
+.blogPic {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.recent-item .pic {
+    overflow: hidden;
+    height: 135px;
+}

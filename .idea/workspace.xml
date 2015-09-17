@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b22e842-d407-4ff6-9a67-025188d15bcd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-app/app/views/layouts/partial/header.blade.php" afterPath="$PROJECT_DIR$/laravel-app/app/views/layouts/partial/header.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Straits.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,16 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel-app/app/views/backend/about-us/edit.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.192308" vertical-offset="185" max-vertical-offset="1054">
-              <caret line="54" column="10" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel-app/app/views/backend/about-us/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -94,31 +85,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel-app/app/views/layouts/partial/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5641026" vertical-offset="457" max-vertical-offset="1972">
+            <state vertical-scroll-proportion="-11.846154" vertical-offset="457" max-vertical-offset="1972">
               <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/js/script.js">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="333" max-vertical-offset="969">
-              <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="66374" max-vertical-offset="66946">
+              <caret line="3932" column="1" selection-start-line="3932" selection-start-column="1" selection-end-line="3932" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AboutUsController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/AboutUsController.php">
+      <file leaf-file-name="LatestNewsRepository.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/laravel-app/app/MyApp/Repositories/LatestNewsRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075" vertical-offset="68" max-vertical-offset="3247">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3649374" vertical-offset="0" max-vertical-offset="559">
+              <caret line="12" column="88" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-app/app/views/layouts/backendpartial/footer.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -159,7 +160,6 @@
         <option value="$PROJECT_DIR$/laravel-app/app/MyApp/Composers/LatestNewsComposer.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/start/global.php" />
         <option value="$PROJECT_DIR$/laravel-app/composer.json" />
-        <option value="$PROJECT_DIR$/laravel-app/app/MyApp/Repositories/LatestNewsRepository.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/config/assets.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/controllers/ArticleController.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/config/app.php" />
@@ -171,7 +171,6 @@
         <option value="$PROJECT_DIR$/laravel-app/app/views/layouts/partial/latest-news.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/backend/about-us/edit.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/backend/about-us/create.blade.php" />
-        <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/home/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/about-us/detail.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/controllers/HomeServiceController.php" />
@@ -193,6 +192,8 @@
         <option value="$PROJECT_DIR$/laravel-app/app/views/backend/about-us/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/about-us/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/layouts/partial/header.blade.php" />
+        <option value="$PROJECT_DIR$/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/laravel-app/app/MyApp/Repositories/LatestNewsRepository.php" />
       </list>
     </option>
   </component>
@@ -539,6 +540,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="MyApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Repositories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Straits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Straits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Straits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Straits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -574,7 +623,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="header&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/partial/header.blade.php&#10;head&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/partial/head.blade.php&#10;menu&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/partial/menu.blade.php&#10;script&#9;FILE&#9;file://C:/wamp/www/testing/Straits/assets/js/script.js&#10;foot&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/backendpartial/footer.blade.php&#10;about&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/controllers/AboutUsController.php&#10;edit&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/backend/about-us/edit.blade.php&#10;home&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/controllers/HomeController.php&#10;route&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/routes.php&#10;service&#9;null&#9;null&#10;rou&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/routes.php&#10;style&#9;FILE&#9;file://C:/wamp/www/testing/Straits/assets/css/style.css&#10;latest&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/partial/latest-news.blade.php&#10;master&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/master.blade.php&#10;menu.&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/partial/menu.blade.php&#10;det&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/news/detail.blade.php&#10;main&#9;FILE&#9;file://C:/wamp/www/testing/Straits/assets/js/main.js&#10;rout&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/routes.php&#10;create&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/backend/article/create.blade.php&#10;database&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/config/database.php&#10;arti&#9;FILE&#9;file://C:/wamp/www/Straits/laravel-app/app/controllers/ArticleController.php&#10;foo&#9;FILE&#9;file://C:/wamp/www/Straits/laravel-app/app/views/layouts/backendpartial/footer.blade.php&#10;scri&#9;FILE&#9;file://C:/wamp/www/Straits/assets/js/script.js&#10;filter&#9;FILE&#9;file://C:/wamp/www/Straits/laravel-app/app/filters.php&#10;fi&#9;FILE&#9;file://C:/wamp/www/Straits/laravel-app/app/config/packages/maatwebsite/excel/filters.php" />
+    <property name="SearchEverywhereHistoryKey" value="foot&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/backendpartial/footer.blade.php&#10;style&#9;FILE&#9;file://C:/wamp/www/testing/Straits/assets/css/style.css&#10;header&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/partial/header.blade.php&#10;head&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/partial/head.blade.php&#10;menu&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/partial/menu.blade.php&#10;script&#9;FILE&#9;file://C:/wamp/www/testing/Straits/assets/js/script.js&#10;about&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/controllers/AboutUsController.php&#10;edit&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/backend/about-us/edit.blade.php&#10;home&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/controllers/HomeController.php&#10;route&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/routes.php&#10;service&#9;null&#9;null&#10;rou&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/routes.php&#10;latest&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/partial/latest-news.blade.php&#10;master&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/master.blade.php&#10;menu.&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/layouts/partial/menu.blade.php&#10;det&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/news/detail.blade.php&#10;main&#9;FILE&#9;file://C:/wamp/www/testing/Straits/assets/js/main.js&#10;rout&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/routes.php&#10;create&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/views/backend/article/create.blade.php&#10;database&#9;FILE&#9;file://C:/wamp/www/testing/Straits/laravel-app/app/config/database.php&#10;arti&#9;FILE&#9;file://C:/wamp/www/Straits/laravel-app/app/controllers/ArticleController.php&#10;foo&#9;FILE&#9;file://C:/wamp/www/Straits/laravel-app/app/views/layouts/backendpartial/footer.blade.php&#10;scri&#9;FILE&#9;file://C:/wamp/www/Straits/assets/js/script.js&#10;filter&#9;FILE&#9;file://C:/wamp/www/Straits/laravel-app/app/filters.php&#10;fi&#9;FILE&#9;file://C:/wamp/www/Straits/laravel-app/app/config/packages/maatwebsite/excel/filters.php" />
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RecentsManager">
@@ -712,13 +761,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/NewsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.923077" vertical-offset="54" max-vertical-offset="646">
-          <caret line="26" column="83" selection-start-line="26" selection-start-column="83" selection-end-line="26" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-app/app/views/news/detail.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.5384617" vertical-offset="0" max-vertical-offset="1190">
@@ -847,13 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
           <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="66120" max-vertical-offset="66759">
-          <caret line="3921" column="1" selection-start-line="3921" selection-start-column="1" selection-end-line="3921" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1000,14 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-app/app/views/layouts/backendpartial/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="333" max-vertical-offset="969">
@@ -1089,8 +1116,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel-app/app/views/layouts/partial/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5641026" vertical-offset="457" max-vertical-offset="1972">
+        <state vertical-scroll-proportion="-11.846154" vertical-offset="457" max-vertical-offset="1972">
           <caret line="45" column="58" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-app/app/views/layouts/backendpartial/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769" vertical-offset="0" max-vertical-offset="238">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="66374" max-vertical-offset="66946">
+          <caret line="3932" column="1" selection-start-line="3932" selection-start-column="1" selection-end-line="3932" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-app/app/MyApp/Repositories/LatestNewsRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3649374" vertical-offset="0" max-vertical-offset="559">
+          <caret line="12" column="88" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
           <folding />
         </state>
       </provider>
