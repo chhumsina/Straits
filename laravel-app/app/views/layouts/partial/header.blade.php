@@ -43,7 +43,7 @@ $baseUrl = URL::to('/');
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.html">Home</a> </li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="{{$baseUrl}}/about-us">About Us</a></li>
                         <li><a href="{{$baseUrl}}/latest-news">Latest News</a></li>
                         <li><a href="{{$baseUrl}}/team-profile">Team Profile</a></li>
                         <li><a href="#">Contat us</a></li>
