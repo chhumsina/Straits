@@ -23,7 +23,15 @@ class NewsController extends \BaseController {
 
     public function detail($id)
     {
-        $item = Article::where('status','approve')->where('id',$id)->first();
+        $item = Article::where('status','approve')->where('slug',$id)->first();
+
+        if($item == null){
+            $msgs = array();
+            $msg = array('type' => 'error', 'msg' => 'This news not found');
+            array_push($msgs, $msg);
+            return Redirect::to('/latest-news')->with('msgs', $msgs);
+        }
+
         $items = Article::where('status','approve')->where('type','news')->limit(15)->get();
 
         $this->layout->content = View::make('news.detail', compact('item','items'));

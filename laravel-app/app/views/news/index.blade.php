@@ -5,6 +5,7 @@
     ?>
 
     <div class="row">
+        @include('layouts.backendpartial.render-message')
         <!--begin isotope -->
         @if ($items->count())
             <div class="isotope">
@@ -23,7 +24,7 @@
                                     </div>
 
                                     <figcaption class="item-description">
-                                        <h5><a href="{{$baseUrl}}/latest-news/detail/{{$item->id}}" title="{{$item->title}}">{{$item->title}}</a></h5>
+                                        <h5><a href="{{$baseUrl}}/latest-news/detail/{{$item->slug}}" title="{{$item->title}}">{{$item->title}}</a></h5>
                                         <span><i class="fa fa-calendar"></i> &nbsp;&nbsp;{{date('d/M/Y H:m:s', strtotime($item->created_at))}} </span>
                                         <br/>
                                         <?php

@@ -14,7 +14,7 @@ class Article extends Eloquent {
 	 * @var string
 	 */
 	protected $table = 'tbl_articles';
-	protected $fillable = ['id','title','image','description','type','status','created_at','updated_at'];
+	protected $fillable = ['id','title','image','description','type','status','created_at','updated_at','slug'];
 
     public function getDates()
     {

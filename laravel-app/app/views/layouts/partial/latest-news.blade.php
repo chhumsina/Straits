@@ -24,15 +24,10 @@ $baseUrl = URL::to('/');
                             <div class="recent-item">
                                 <figure class="touching medium">
                                     <div class="pic">
-                                        <img src="{{$baseUrl}}/assets/images/upload/{{$item->image}}" title="{{$item->image}}" alt="{{$item->image}}" />
+                                        <a href="{{$baseUrl}}/latest-news/detail/{{$item->slug}}" title="{{$item->title}}"><img src="{{$baseUrl}}/assets/images/upload/{{$item->image}}" title="{{$item->image}}" alt="{{$item->image}}" /></a>
                                     </div>
-                                    <div class="skin-overlay"></div>
-                                    <a href="images/portfolio/full/portfolio_1.png" class="hover-zoom mfp-image" ><i class="fa fa-search"></i></a>
-                                    <a href="portfolio_single.html" class="hover-link">
-                                        <i class="fa fa-link"></i>
-                                    </a>
                                     <figcaption class="item-description">
-                                        <h5>{{$item->title}}</h5>
+                                        <h5><a href="{{$baseUrl}}/latest-news/detail/{{$item->slug}}" title="{{$item->title}}">{{$item->title}}</a></h5>
                                     </figcaption>
                                 </figure>
                             </div>

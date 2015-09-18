@@ -54,6 +54,7 @@ class ArticleController extends \BaseController {
         $validator = Validator::make($data,$rule);
 
         if ($validator->passes()) {
+            $slug = $this->slugify($inputs['title']);
             if (Input::has('submit')) {
                 $data = array(
                                 "title"=>$inputs['title'],
@@ -61,6 +62,7 @@ class ArticleController extends \BaseController {
                                 "description"=>$inputs['description'],
                                 "status"=>$inputs['status'],
                                 "type"=>$inputs['type'],
+                                "slug"=>$slug,
                               );
 
                 $article = Article::create($data);
@@ -152,8 +154,10 @@ class ArticleController extends \BaseController {
 
         if ($validation->passes()) {
             if (Input::has('submit')) {
+                $slug = $this->slugify($inputs['title']);
                 $article = Article::find($inputs['id']);
                 $article->title = Input::get('title');
+                $article->slug = $slug;
                 if (Input::hasFile('image')) {
                     $article->image = $imagename;
                 }
