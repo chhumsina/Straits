@@ -40,6 +40,7 @@ class OtherController extends \BaseController {
                     $article->image = $imagename;
                 }
                 $article->welcome = $inputs['welcome'];
+                $article->contact = $inputs['description'];
                 $article->footer = $inputs['footer'];
                 $article->save();
 

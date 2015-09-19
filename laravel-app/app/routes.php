@@ -38,6 +38,8 @@ Route::get('about-us/detail/{id}', 'HomeAboutUsController@detail');
 Route::get('about-us', 'HomeAboutUsController@index');
 Route::post('about-us', 'HomeAboutUsController@index');
 
+Route::get('contact-us', 'HomeContactUsController@index');
+
 Route::get('feature/{id}', 'HomeController@feature');
 
 // Admin login
