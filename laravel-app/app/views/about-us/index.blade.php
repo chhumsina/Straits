@@ -49,7 +49,7 @@
                             <div class="recent-item">
                                 <figure class="portfolio_1 touching medium">
                                     <div class="pic">
-                                        <img src="{{$baseUrl}}/assets/images/upload/{{$item->image}}" alt="" />
+                                        <img src="{{$baseUrl}}/assets/images/upload/{{ !empty($item->image)?$item->image:'sample.jpg' }}" alt="" />
                                         <div class="skin-overlay"></div>
                                         <a href="{{$baseUrl}}/assets/images/upload/{{$item->image}}" class="hover-zoom mfp-image" ><i class="fa fa-search"></i></a>
                                     </div>

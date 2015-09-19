@@ -71,7 +71,7 @@
                 @foreach($about as $item)
                     <div class="col-md-6 rec_blog">
                         <div class="blogPic">
-                            <img src="{{$baseUrl}}/assets/images/upload/{{$item->image}}" title="{{$item->image}}" alt="{{$item->image}}"/>
+                            <img src="{{$baseUrl}}/assets/images/upload/{{ !empty($item->image)?$item->image:'sample.jpg' }}" title="{{$item->image}}" alt="No image"/>
                         </div>
                         <div class="blogDetail">
                             <div class="blogTitle">
