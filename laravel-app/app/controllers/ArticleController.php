@@ -24,13 +24,13 @@ class ArticleController extends \BaseController {
 
 		$n = 15;
 		$articles = $db->paginate($n)->appends($inputs);
-        $title = 'Article';
+        $title = 'News';
 		$this->layout->content = View::make('backend.article.index', compact('articles','title'));
 	}
 
     public function create()
     {
-        $title = 'Article';
+        $title = 'News';
         $this->layout->content = View::make('backend.article.create', compact('title'));
     }
 
@@ -69,7 +69,7 @@ class ArticleController extends \BaseController {
                 if($article){
                     $msg = array('type'=>'success','msg'=>'create successfully!');
                     array_push($msgs,$msg);
-                    return Redirect::to('backend/article')
+                    return Redirect::to('backend/news')
                         ->with('msgs', $msgs);
                 }else{
                     $msg = array('type'=>'error','msg'=>'cannot create!');
@@ -111,7 +111,7 @@ class ArticleController extends \BaseController {
             $msgs = array();
             $msg = array('type'=>'error','msg'=>'Invalide url!');
             array_push($msgs,$msg);
-            return Redirect::to('backend/article')
+            return Redirect::to('backend/news')
                 ->with('msgs', $msgs);
         }
         $this->layout->content = View::make('backend.article.detail', compact('article'));
@@ -124,7 +124,7 @@ class ArticleController extends \BaseController {
             $msgs = array();
             $msg = array('type'=>'error','msg'=>'Invalide url!');
             array_push($msgs,$msg);
-            return Redirect::to('backend/article')
+            return Redirect::to('backend/news')
                 ->with('msgs', $msgs);
         }
         $title = 'Edit';
@@ -169,7 +169,7 @@ class ArticleController extends \BaseController {
                 if($article){
                     $msg = array('type'=>'success','msg'=>'update success!');
                     array_push($msgs,$msg);
-                    return Redirect::to('backend/article')
+                    return Redirect::to('backend/news')
                         ->with('msgs', $msgs);
                 }else{
                     $msg = array('type'=>'error','msg'=>'cannot update!');

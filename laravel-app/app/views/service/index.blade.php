@@ -5,6 +5,7 @@
     ?>
 
     <div class="row">
+        @include('layouts.backendpartial.render-message')
         <!--begin isotope -->
         @if ($items->count())
             <div class="isotope">

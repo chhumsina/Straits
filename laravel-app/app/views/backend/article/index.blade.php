@@ -8,7 +8,7 @@ $baseUrl = URL::to('/');
 	<div class="row">
         <div class="col-md-12">
             <div class="row">
-            <?php echo Form::open(array('url' => 'backend/article', 'role' => 'form', 'class'=>'form-inline')) ?>
+            <?php echo Form::open(array('url' => 'backend/news', 'role' => 'form', 'class'=>'form-inline')) ?>
                 <div class="col-md-10">
                 <?php
                         $types = array(''=>'Select Type','feature'=>'Feature', 'news'=>'News');
@@ -19,12 +19,12 @@ $baseUrl = URL::to('/');
                         $type = ''; if (Input::has('type')){$type = Input::get('type');}
                     ?>
                     {{Form::text('title',$title, array('class' => 'form-control', 'placeholder'=>'Title','style'=>' height: 34px; width: 50%;'))}}
-                    {{ Form::select('type', $types, $type, ['class' => 'form-control']) }}
+                    {{ Form::hidden('type','news', ['class' => 'form-control']) }}
                     {{ Form::select('status', $statuses, $status, ['class' => 'form-control']) }}
                     <input type="submit" value="Search" name="search" class="form-control" style=" height: 33px;margin-left: 9px;margin-top: -9px;"/>
                 </div>
                 <div class="col-md-2">
-                    <a href="{{$baseUrl}}/backend/article/create" class="btn btn-default pull-right">Create</a>
+                    <a href="{{$baseUrl}}/backend/news/create" class="btn btn-default pull-right">Create</a>
                 </div>
             </div>
             <?php echo Form::close() ?>
@@ -62,8 +62,8 @@ $baseUrl = URL::to('/');
                                 @else
                                     <a class="btn btn-default alertPending" href="{{$baseUrl}}/<?php if($item->type == 'news'){echo'latest-news';}else{echo'feature';}?>/detail/{{$item->slug}}" target="_blank"><span class="fa fa-eye"></span></a>
                                 @endif
-                                <a class="btn btn-default" href="{{$baseUrl}}/backend/article/edit/{{$item->id}}" ><span class="fa fa-edit"></span></a>
-                                <a class="btn btn-danger mgsDelete" href="{{$baseUrl}}/backend/article/delete/{{$item->id}}" ><span class="fa fa-remove">X</span></a>
+                                <a class="btn btn-default" href="{{$baseUrl}}/backend/news/edit/{{$item->id}}" ><span class="fa fa-edit"></span></a>
+                                <a class="btn btn-danger mgsDelete" href="{{$baseUrl}}/backend/news/delete/{{$item->id}}" ><span class="fa fa-remove">X</span></a>
                             </td>
 						</tr>
 					@endforeach

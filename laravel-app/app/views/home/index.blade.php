@@ -20,7 +20,7 @@
                         @if($k == 3)
                             <div class="moreagency">See more...</div>
                         @endif
-                        <li><a href="{{$baseUrl}}/service/detail/{{$item->id}}" title="{{$item->title}}">{{$item->title}}</a></li>
+                        <li><a href="{{$baseUrl}}/service/detail/{{$item->slug}}" title="{{$item->title}}">{{$item->title}}</a></li>
                     @endforeach
                 </ul>
             </div>
@@ -52,7 +52,7 @@
                         @if($k == 3)
                             <div class="moreother">See more...</div>
                         @endif
-                        <li><a href="{{$baseUrl}}/service/detail/{{$item->id}}" title="{{$item->title}}">{{$item->title}}</a></li>
+                        <li><a href="{{$baseUrl}}/service/detail/{{$item->slug}}" title="{{$item->title}}">{{$item->title}}</a></li>
                     @endforeach
                 </ul>
             </div>
@@ -75,7 +75,7 @@
                         </div>
                         <div class="blogDetail">
                             <div class="blogTitle">
-                                <a href="{{$baseUrl}}/about-us/detail/{{$item->id}}" title="{{$item->title}}"><h2>{{$item->title}}</h2></a>
+                                <a href="{{$baseUrl}}/about-us/detail/{{$item->slug}}" title="{{$item->title}}"><h2>{{$item->title}}</h2></a>
                             </div>
                         </div>
                     </div>

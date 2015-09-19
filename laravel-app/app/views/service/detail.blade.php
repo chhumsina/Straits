@@ -55,7 +55,7 @@
                     </div>
                     <ul class="arrows_list list_style">
                         @foreach($items as $item)
-                            <li><a href="{{$baseUrl}}/service/detail/{{$item->id}}" title="{{$item->title}}">{{$item->title}}</a></li>
+                            <li><a href="{{$baseUrl}}/service/detail/{{$item->slug}}" title="{{$item->title}}">{{$item->title}}</a></li>
                         @endforeach
                     </ul>
                 </div>

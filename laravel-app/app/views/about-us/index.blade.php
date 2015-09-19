@@ -3,6 +3,10 @@
     <?php
     $baseUrl = URL::to('/');
     ?>
+    <br/>
+    <div class="dividerHeading">
+        <h4></h4>
+    </div>
     <div class="row">
         <div class="col-md-12">
             <div class="who">
@@ -30,11 +34,9 @@
             </div>
         </div>
     </div>
-    <br/>
-    <div class="dividerHeading">
-        <h4></h4>
-    </div>
     <div class="row">
+
+        @include('layouts.backendpartial.render-message')
         <!--begin isotope -->
         @if ($items->count())
             <div class="isotope">

@@ -27,7 +27,7 @@ class NewsController extends \BaseController {
 
         if($item == null){
             $msgs = array();
-            $msg = array('type' => 'error', 'msg' => 'This news not found');
+            $msg = array('type' => 'error', 'msg' => 'This news is not found');
             array_push($msgs, $msg);
             return Redirect::to('/latest-news')->with('msgs', $msgs);
         }

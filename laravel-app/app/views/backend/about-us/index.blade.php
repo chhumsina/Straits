@@ -19,7 +19,7 @@ $baseUrl = URL::to('/');
                         $type = ''; if (Input::has('type')){$type = Input::get('type');}
                     ?>
                     {{Form::text('title',$title, array('class' => 'form-control', 'placeholder'=>'Title','style'=>' height: 34px; width: 50%;'))}}
-                    {{ Form::select('type', $types, $type, ['class' => 'form-control']) }}
+                    {{ Form::hidden('type', 'about_us', ['class' => 'form-control']) }}
                     {{ Form::select('status', $statuses, $status, ['class' => 'form-control']) }}
                     <input type="submit" value="Search" name="search" class="form-control" style=" height: 33px;margin-left: 9px;margin-top: -9px;"/>
                 </div>
@@ -58,9 +58,9 @@ $baseUrl = URL::to('/');
 							<td>{{$item->created_at}}</td>
 							<td>
                                 @if($item->status == 'approve')
-                                    <a class="btn btn-default" href="{{$baseUrl}}/<?php if($item->type == 'news'){echo'latest-news';}else{echo'feature';}?>/detail/{{$item->id}}" target="_blank"><span class="fa fa-eye"></span></a>
+                                    <a class="btn btn-default" href="{{$baseUrl}}/about-us/detail/{{$item->slug}}" target="_blank"><span class="fa fa-eye"></span></a>
                                 @else
-                                    <a class="btn btn-default alertPending" href="{{$baseUrl}}/<?php if($item->type == 'news'){echo'latest-news';}else{echo'feature';}?>/detail/{{$item->id}}" target="_blank"><span class="fa fa-eye"></span></a>
+                                    <a class="btn btn-default alertPending" href="{{$baseUrl}}/about_us/detail/{{$item->slug}}" target="_blank"><span class="fa fa-eye"></span></a>
                                 @endif
                                 <a class="btn btn-default" href="{{$baseUrl}}/backend/about-us/edit/{{$item->id}}" ><span class="fa fa-edit"></span></a>
                                 <a class="btn btn-danger mgsDelete" href="{{$baseUrl}}/backend/about-us/delete/{{$item->id}}" ><span class="fa fa-remove">X</span></a>

@@ -6,9 +6,9 @@
     ?>
     <div class="container-page">
         <div class="col-md-12">
-            <?php echo Form::open(array('url' => 'backend/article/edit', 'files'=> true)) ?>
+            <?php echo Form::open(array('url' => 'backend/service/edit', 'files'=> true)) ?>
             <?php
-            $types = array(''=>'Select Type','feature'=>'Feature', 'news'=>'News');
+                $types = array(''=>'Select Type','shipping_agency'=>'Shipping Agency', 'freight_forwarding'=>'Freight Forwarding','other_services'=>'Other Services');
             $statuses = array(''=>'Select Status','approve'=>'Approve', 'pending'=>'Pending');
 
             $title = ''; if (Input::has('title')){$title = Input::get('title');}

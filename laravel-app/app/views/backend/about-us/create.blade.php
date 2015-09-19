@@ -16,22 +16,19 @@
             $type = ''; if (Input::has('type')){$type = Input::get('type');}
             $description = ''; if (Input::has('description')){$description = Input::get('description');}
             ?>
-
-            <div class="form-group col-lg-12">
+<div class="row">
+            <div class="form-group col-lg-6">
                 <label>Title</label>
                 {{ Form::text('title', $title, array('class' => 'form-control'))}}
-            </div>
-
-            <div class="form-group col-lg-6">
-                <label>Type</label>
-                {{ Form::select('type', $types,$type, ['class' => 'form-control']) }}
+                {{ Form::hidden('type', 'about_us', ['class' => 'form-control']) }}
             </div>
 
             <div class="form-group col-lg-6">
                 <label>Status</label>
                 {{ Form::select('status', $statuses, $status, ['class' => 'form-control']) }}
             </div>
-
+</div>
+<div class="row">
             <div class="form-group col-lg-6">
                 <label>Image</label>
                 {{ Form::file('image', array('class' => 'form-control','id'=>'imgInp'))}}
@@ -40,7 +37,7 @@
             <div class="form-group col-lg-6">
                 <img id="blah" src="#" alt="Preview image here" width="200" height="200" />
             </div>
-
+</div>
         </div>
 
         <div class="col-md-12">

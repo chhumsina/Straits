@@ -85,14 +85,14 @@ Route::group(array('before' => 'auth'), function() {
     // backend
 	Route::get('backend', 'BackendController@dashboard');
 
-	Route::get('backend/article', 'ArticleController@index');
-	Route::post('backend/article', 'ArticleController@index');
-    Route::get('backend/article/create', 'ArticleController@create');
-    Route::post('backend/article/store', 'ArticleController@store');
-    Route::get('backend/article/edit/{id}', 'ArticleController@edit');
-    Route::get('backend/article/delete/{id}', 'ArticleController@delete');
-    Route::get('backend/article/detail/{id}', 'ArticleController@detail');
-    Route::post('backend/article/edit', 'ArticleController@update');
+	Route::get('backend/news', 'ArticleController@index');
+	Route::post('backend/news', 'ArticleController@index');
+    Route::get('backend/news/create', 'ArticleController@create');
+    Route::post('backend/news/store', 'ArticleController@store');
+    Route::get('backend/news/edit/{id}', 'ArticleController@edit');
+    Route::get('backend/news/delete/{id}', 'ArticleController@delete');
+    Route::get('backend/news/detail/{id}', 'ArticleController@detail');
+    Route::post('backend/news/edit', 'ArticleController@update');
 
     Route::get('backend/about-us', 'AboutUsController@index');
     Route::post('backend/about-us', 'AboutUsController@index');

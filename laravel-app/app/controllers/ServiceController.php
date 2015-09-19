@@ -55,8 +55,10 @@ class ServiceController extends \BaseController {
 
         if ($validator->passes()) {
             if (Input::has('submit')) {
+                $slug = $this->slugify($inputs['title']);
                 $data = array(
                                 "title"=>$inputs['title'],
+                                "slug"=>$slug,
                                 "image"=>$imagename,
                                 "description"=>$inputs['description'],
                                 "status"=>$inputs['status'],
@@ -152,8 +154,10 @@ class ServiceController extends \BaseController {
 
         if ($validation->passes()) {
             if (Input::has('submit')) {
+                $slug = $this->slugify($inputs['title']);
                 $article = Article::find($inputs['id']);
                 $article->title = Input::get('title');
+                $article->slug = $slug;
                 if (Input::hasFile('image')) {
                     $article->image = $imagename;
                 }
