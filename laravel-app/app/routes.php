@@ -39,6 +39,7 @@ Route::get('about-us', 'HomeAboutUsController@index');
 Route::post('about-us', 'HomeAboutUsController@index');
 
 Route::get('contact-us', 'HomeContactUsController@index');
+Route::get('contact-us/send', 'HomeContactUsController@send');
 
 Route::get('feature/{id}', 'HomeController@feature');
 
