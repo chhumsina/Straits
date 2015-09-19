@@ -5,7 +5,7 @@ $baseUrl = URL::to('/');
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-3 col-lg-3">
+            <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class="widget_title">
                     <h4><span>About Us</span></h4>
                 </div>
@@ -18,7 +18,7 @@ $baseUrl = URL::to('/');
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
+            <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class="widget_title">
                     <h4><span>Recent Posts</span></h4>
                 </div>
@@ -31,7 +31,7 @@ $baseUrl = URL::to('/');
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
+            <div class="col-sm-6 col-md-4 col-lg-4">
                 <div class="widget_title">
                     <h4><span>Twitter</span></h4>
 
@@ -53,17 +53,6 @@ $baseUrl = URL::to('/');
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
-                <div class="widget_title">
-                    <h4><span>Flickr Gallery</span></h4>
-
-                </div>
-                <div class="widget_content">
-                    <div class="flickr">
-                        <ul id="flickrFeed" class="flickr-feed"></ul>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </footer>
@@ -73,7 +62,7 @@ $baseUrl = URL::to('/');
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p class="copyright">&copy; Copyright 2014 jQuery Rain | Powered by  <a href="http://jQueryrain.com/"> jQuery Rain</a></p>
+                <p class="copyright">{{$other->footer}}</p>
             </div>
 
             <div class="col-md-6">

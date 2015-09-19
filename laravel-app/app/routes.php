@@ -85,6 +85,9 @@ Route::group(array('before' => 'auth'), function() {
     // backend
 	Route::get('backend', 'BackendController@dashboard');
 
+    Route::get('backend/other', 'OtherController@index');
+    Route::post('backend/other/edit', 'OtherController@edit');
+
 	Route::get('backend/news', 'ArticleController@index');
 	Route::post('backend/news', 'ArticleController@index');
     Route::get('backend/news/create', 'ArticleController@create');

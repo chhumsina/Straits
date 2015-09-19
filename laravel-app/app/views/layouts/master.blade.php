@@ -3,12 +3,16 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 @include('layouts.partial.head')
 <body class="home">
-<div id="rainy-container">
-    <img id="background" alt="background" class="background" src="assets/images/head-3.png"/>
-</div>
+
 <?php
 $baseUrl = URL::to('/');
 ?>
+<div id="rainy-container">
+    <?php
+        $other = Other::first();
+    ?>
+    <img id="background" alt="background" class="background" src="{{$baseUrl}}/assets/images/banner/{{$other->image}}"/>
+</div>
   	@include('layouts.partial.header')
 
 <!--start wrapper-->
@@ -18,7 +22,7 @@ $baseUrl = URL::to('/');
             <div class="row">
                 <div class="col-sm-9">
                     <div class="promo_content">
-                        <h3>WELCOME TO STRAITS INTERNATIONAL PTE., LTD</h3>
+                        <h3>{{$other->welcome}}</h3>
                     </div>
                 </div>
             </div>

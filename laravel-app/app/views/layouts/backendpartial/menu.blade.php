@@ -73,6 +73,9 @@ $baseUrl = URL::to('/');
             <li>
                 <a href="{{$baseUrl}}/backend/team-profile"><i class="fa fa-fw fa-table"></i> Team Profile</a>
             </li>
+            <li>
+                <a href="{{$baseUrl}}/backend/other"><i class="fa fa-fw fa-table"></i> Other</a>
+            </li>
 		</ul>
 	</div>
 	<!-- /.navbar-collapse -->
