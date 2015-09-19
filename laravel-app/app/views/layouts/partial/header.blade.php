@@ -42,12 +42,12 @@ $baseUrl = URL::to('/');
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a> </li>
-                        <li><a href="{{$baseUrl}}/about-us">About Us</a></li>
-                        <li><a href="{{$baseUrl}}/latest-news">Latest News</a></li>
-                        <li><a href="{{$baseUrl}}/team-profile">Team Profile</a></li>
-                        <li><a href="{{$baseUrl}}/contact-us">Contat us</a></li>
-                        <li><a href="{{$baseUrl}}/map">Map</a></li>
+                        <li class="home"><a href="{{$baseUrl}}">Home</a> </li>
+                        <li class="about-us"><a href="{{$baseUrl}}/about-us">About Us</a></li>
+                        <li class="latest-news"><a href="{{$baseUrl}}/latest-news">Latest News</a></li>
+                        <li class="team-profile"><a href="{{$baseUrl}}/team-profile">Team Profile</a></li>
+                        <li class="contact-us"><a href="{{$baseUrl}}/contact-us">Contat us</a></li>
+                        <li class="map"><a href="{{$baseUrl}}/map">Map</a></li>
 
                     </ul>
                 </div>

@@ -102,6 +102,13 @@ $baseUrl = URL::to('/');
 <script type="text/javascript" src="{{$baseUrl}}/assets/plugin/map/js/googleMapApi.js"></script>
 @endif
 
+<?php
+ $url = Request::segment(1);
+    if(empty($url)){
+        $url = 'home';
+    }
+?>
+
 <script src="{{$baseUrl}}/assets/js/main.js"></script>
 <script>
     $(window).load(function(){
@@ -136,6 +143,10 @@ $baseUrl = URL::to('/');
     window.onload = function() {
         run();
     };
+
+    $(document).ready(function(){
+        $('.<?php echo $url;?>').addClass('active');
+    });
 </script>
 </body>
 </html>
