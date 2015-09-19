@@ -107,8 +107,12 @@ $baseUrl = URL::to('/');
 <script type="text/javascript" src="{{$baseUrl}}/assets/js/jquery.isotope.min.js"></script>
 <script type="text/javascript" src="{{$baseUrl}}/assets/js/swipe.js"></script>
 <script type="text/javascript" src="{{$baseUrl}}/assets/js/rainyday.js"></script>
+
+@if(Request::segment(2) == 'map')
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript" src="{{$baseUrl}}/assets/plugin/map/js/googleMapApi.js"></script>
+@endif
+
 <script src="{{$baseUrl}}/assets/js/main.js"></script>
 <script>
     $(window).load(function(){

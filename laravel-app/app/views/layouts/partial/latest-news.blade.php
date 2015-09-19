@@ -24,7 +24,7 @@ $baseUrl = URL::to('/');
                             <div class="recent-item">
                                 <figure class="touching medium">
                                     <div class="pic">
-                                        <a href="{{$baseUrl}}/latest-news/detail/{{$item->slug}}" title="{{$item->title}}"><img src="{{$baseUrl}}/assets/images/upload/{{$item->image}}" title="{{$item->image}}" alt="{{$item->image}}" /></a>
+                                        <a href="{{$baseUrl}}/latest-news/detail/{{$item->slug}}" title="{{$item->title}}"><img src="{{$baseUrl}}/assets/images/upload/{{$item->image}}" title="{{$item->title}}" alt="{{$item->title}}" /></a>
                                     </div>
                                     <figcaption class="item-description">
                                         <h5><a href="{{$baseUrl}}/latest-news/detail/{{$item->slug}}" title="{{$item->title}}">{{$item->title}}</a></h5>

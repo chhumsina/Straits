@@ -62,9 +62,6 @@ $baseUrl = URL::to('/');
 	<div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav side-nav">
 			<li>
-				<a href="{{$baseUrl}}/backend"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-			</li>
-			<li>
 				<a href="{{$baseUrl}}/backend/news"><i class="fa fa-fw fa-bar-chart-o"></i> News</a>
 			</li>
 			<li>
