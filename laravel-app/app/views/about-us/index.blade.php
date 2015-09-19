@@ -61,8 +61,8 @@
                                         <?php
                                             $string = strip_tags($item->description);
 
-                                            if (strlen($string) > 700) {
-                                                $stringCut = substr($string, 0, 700);
+                                            if (strlen($string) > 400) {
+                                                $stringCut = substr($string, 0, 400);
                                                 $string = substr($stringCut, 0, strrpos($stringCut, ' ')).'... <a href="'.$baseUrl.'/service/detail/'.$item->id.'" title="{{$item->title}}">Read More</a>';
                                             }
                                             echo $string;

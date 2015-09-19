@@ -24,7 +24,7 @@ class AboutUsController extends \BaseController {
             $db->where('status',$inputs['status']);
         }
 
-		$n = 15;
+		$n = 10;
 		$articles = $db->paginate($n)->appends($inputs);
         $title = 'About Us';
 		$this->layout->content = View::make('backend.about-us.index', compact('articles','article','title'));

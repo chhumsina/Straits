@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b22e842-d407-4ff6-9a67-025188d15bcd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-app/app/controllers/HomeContactUsController.php" afterPath="$PROJECT_DIR$/laravel-app/app/controllers/HomeContactUsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-app/app/views/contact-us/index.blade.php" afterPath="$PROJECT_DIR$/laravel-app/app/views/contact-us/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-app/app/routes.php" afterPath="$PROJECT_DIR$/laravel-app/app/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-app/app/controllers/AboutUsController.php" afterPath="$PROJECT_DIR$/laravel-app/app/controllers/AboutUsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-app/app/controllers/HomeServiceController.php" afterPath="$PROJECT_DIR$/laravel-app/app/controllers/HomeServiceController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-app/app/controllers/NewsController.php" afterPath="$PROJECT_DIR$/laravel-app/app/controllers/NewsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-app/app/views/about-us/index.blade.php" afterPath="$PROJECT_DIR$/laravel-app/app/views/about-us/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-app/app/views/news/index.blade.php" afterPath="$PROJECT_DIR$/laravel-app/app/views/news/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel-app/app/views/service/index.blade.php" afterPath="$PROJECT_DIR$/laravel-app/app/views/service/index.blade.php" />
     </list>
     <ignored path="Straits.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,51 +32,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel-app/app/views/backend/other/edit.blade.php">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-app/app/views/news/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154" vertical-offset="646" max-vertical-offset="1428">
-              <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/AccountController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.2181816" vertical-offset="4401" max-vertical-offset="6239">
-              <caret line="279" column="71" selection-start-line="279" selection-start-column="62" selection-end-line="279" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel-app/app/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.615385" vertical-offset="34" max-vertical-offset="2346">
-              <caret line="41" column="59" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769" vertical-offset="612" max-vertical-offset="1309">
-              <caret line="44" column="34" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+            <state vertical-scroll-proportion="-15.038462" vertical-offset="153" max-vertical-offset="1003">
+              <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/laravel-app/app/views/news/index.blade.php">
+        <entry file="file://$PROJECT_DIR$/laravel-app/app/views/service/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1003">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+            <state vertical-scroll-proportion="-17.653847" vertical-offset="102" max-vertical-offset="1003">
+              <caret line="33" column="81" selection-start-line="33" selection-start-column="81" selection-end-line="33" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-app/app/views/about-us/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.730769" vertical-offset="731" max-vertical-offset="1530">
+              <caret line="64" column="81" selection-start-line="64" selection-start-column="81" selection-end-line="64" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -90,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeContactUsController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HomeContactUsController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/HomeContactUsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.961538" vertical-offset="343" max-vertical-offset="1020">
+            <state vertical-scroll-proportion="0.60394263" vertical-offset="343" max-vertical-offset="1020">
               <caret line="40" column="44" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="44" />
               <folding />
             </state>
@@ -110,11 +92,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contact.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/laravel-app/app/views/email/contact.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5788531" vertical-offset="0" max-vertical-offset="558">
+            <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="425">
               <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/NewsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.1538463" vertical-offset="224" max-vertical-offset="782">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -148,20 +140,16 @@
         <option value="$PROJECT_DIR$/laravel-app/app/controllers/ServiceController.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/service/detail.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/backend/service/index.blade.php" />
-        <option value="$PROJECT_DIR$/laravel-app/app/views/service/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/backend/article/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/controllers/ArticleController.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/backend/article/create.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/backend/article/edit.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/backend/service/edit.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/backend/about-us/create.blade.php" />
-        <option value="$PROJECT_DIR$/laravel-app/app/controllers/AboutUsController.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/backend/about-us/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/controllers/HomeAboutUsController.php" />
-        <option value="$PROJECT_DIR$/laravel-app/app/controllers/HomeServiceController.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/backend/about-us/edit.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/layouts/backendpartial/menu.blade.php" />
-        <option value="$PROJECT_DIR$/laravel-app/app/controllers/NewsController.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/models/Other.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/layouts/partial/footer.blade.php" />
@@ -170,8 +158,6 @@
         <option value="$PROJECT_DIR$/laravel-app/app/views/backend/other/edit.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/home/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/layouts/partial/latest-news.blade.php" />
-        <option value="$PROJECT_DIR$/laravel-app/app/views/about-us/index.blade.php" />
-        <option value="$PROJECT_DIR$/laravel-app/app/views/news/index.blade.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/home/team-profile.blade.php" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/laravel-app/app/routes.php" />
@@ -179,6 +165,12 @@
         <option value="$PROJECT_DIR$/laravel-app/app/controllers/HomeContactUsController.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/config/mail.php" />
         <option value="$PROJECT_DIR$/laravel-app/app/views/email/contact.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-app/app/controllers/NewsController.php" />
+        <option value="$PROJECT_DIR$/laravel-app/app/views/news/index.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-app/app/views/service/index.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-app/app/views/about-us/index.blade.php" />
+        <option value="$PROJECT_DIR$/laravel-app/app/controllers/HomeServiceController.php" />
+        <option value="$PROJECT_DIR$/laravel-app/app/controllers/AboutUsController.php" />
       </list>
     </option>
   </component>
@@ -284,6 +276,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Straits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Straits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Straits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Straits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="news" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -418,6 +462,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="account" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Straits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Straits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="about-us" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -800,31 +870,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/AboutUsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.618182" vertical-offset="610" max-vertical-offset="3315">
-          <caret line="67" column="18" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/HomeAboutUsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.653847" vertical-offset="34" max-vertical-offset="765">
           <caret line="29" column="70" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/HomeServiceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462" vertical-offset="85" max-vertical-offset="748">
-          <caret line="28" column="70" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-app/app/views/service/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="1003">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -860,13 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5788531" vertical-offset="0" max-vertical-offset="1003">
           <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/NewsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9962193" vertical-offset="0" max-vertical-offset="782">
-          <caret line="31" column="23" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -970,14 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-app/app/views/about-us/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0" vertical-offset="425" max-vertical-offset="1530">
-          <caret line="51" column="143" selection-start-line="51" selection-start-column="143" selection-end-line="51" selection-end-column="143" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel-app/app/views/home/team-profile.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.230769" vertical-offset="24" max-vertical-offset="765">
@@ -1022,14 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3655914" vertical-offset="0" max-vertical-offset="558">
           <caret line="12" column="88" selection-start-line="12" selection-start-column="88" selection-end-line="12" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-app/app/views/news/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="1003">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1082,18 +1108,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/HomeContactUsController.php">
+    <entry file="file://$PROJECT_DIR$/laravel-app/app/views/email/contact.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.961538" vertical-offset="343" max-vertical-offset="1020">
-          <caret line="40" column="44" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="44" />
+        <state vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="425">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel-app/app/views/email/contact.blade.php">
+    <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/NewsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5788531" vertical-offset="0" max-vertical-offset="558">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        <state vertical-scroll-proportion="-3.1538463" vertical-offset="224" max-vertical-offset="782">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-app/app/views/news/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.038462" vertical-offset="153" max-vertical-offset="1003">
+          <caret line="32" column="67" selection-start-line="32" selection-start-column="67" selection-end-line="32" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-app/app/views/service/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.653847" vertical-offset="102" max-vertical-offset="1003">
+          <caret line="33" column="81" selection-start-line="33" selection-start-column="81" selection-end-line="33" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-app/app/views/about-us/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.730769" vertical-offset="731" max-vertical-offset="1530">
+          <caret line="64" column="81" selection-start-line="64" selection-start-column="81" selection-end-line="64" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/AboutUsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45698926" vertical-offset="187" max-vertical-offset="3315">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/HomeServiceController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40550458" vertical-offset="85" max-vertical-offset="748">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel-app/app/controllers/HomeContactUsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60394263" vertical-offset="343" max-vertical-offset="1020">
+          <caret line="40" column="44" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="44" />
           <folding />
         </state>
       </provider>

@@ -16,7 +16,7 @@ class NewsController extends \BaseController {
         if(Input::has('title')){
             $db->where('title', 'LIKE', "%".$inputs['title']."%");
         }
-        $items = $db->paginate(2)->appends($inputs);
+        $items = $db->paginate(10)->appends($inputs);
 
 		$this->layout->content = View::make('news.index', compact('items'));
 	}
