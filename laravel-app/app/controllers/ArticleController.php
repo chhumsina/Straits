@@ -9,7 +9,7 @@ class ArticleController extends \BaseController {
 
 	public function index()
 	{
-        $db = Article::orderBy('created_at','DESC')->whereIn('type',array('news'));
+        $db = Article::orderBy('created_at','DESC')->whereIn('type',array('news','feature'));
 		$inputs = Input::all();
 
 		if (Input::has('title')) {

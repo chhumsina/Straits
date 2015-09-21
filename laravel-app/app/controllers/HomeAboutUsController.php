@@ -13,6 +13,7 @@ class HomeAboutUsController extends \BaseController {
 	{
         $inputs = Input::all();
         $article = Article::orderBy('created_at','DESC')->whereIn('type',array('about_content'))->first();
+
         $db = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','about_us');
         if(Input::has('title')){
             $db->where('title', 'LIKE', "%".$inputs['title']."%");

@@ -8,8 +8,8 @@
         <div class="col-md-12">
             <?php echo Form::open(array('url' => 'backend/news/edit', 'files'=> true)) ?>
             <?php
-            $types = array(''=>'Select Type','feature'=>'Feature', 'news'=>'News');
-            $statuses = array(''=>'Select Status','approve'=>'Approve', 'pending'=>'Pending');
+            $types = array('news'=>'No', 'feature'=>'Yes');
+            $statuses = array('approve'=>'Approve', 'pending'=>'Pending');
 
             $title = ''; if (Input::has('title')){$title = Input::get('title');}
             $status = ''; if (Input::has('status')){$status = Input::get('status');}
@@ -20,12 +20,15 @@
                 <label>Title</label>
                 {{ Form::hidden('id', $article->id, array('class' => 'form-control'))}}
                 {{ Form::text('title', $article->title, array('class' => 'form-control'))}}
-                {{ Form::hidden('type','news', ['class' => 'form-control']) }}
             </div>
 
-            <div class="form-group col-lg-6">
+            <div class="form-group col-lg-3">
                 <label>Status</label>
                 {{ Form::select('status', $statuses, $article->status, ['class' => 'form-control']) }}
+            </div>
+            <div class="form-group col-lg-3">
+                <label>Feature</label>
+                {{ Form::select('type', $types, $article->type, ['class' => 'form-control']) }}
             </div>
         </div>
         <div class="row">

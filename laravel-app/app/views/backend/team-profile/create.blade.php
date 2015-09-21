@@ -8,7 +8,7 @@
         <div class="col-md-12">
             <?php echo Form::open(array('url' => 'backend/team-profile/store', 'files'=> true)) ?>
             <?php
-                $statuses = array(''=>'Select Status','approve'=>'Approve', 'pending'=>'Pending');
+                $statuses = array('approve'=>'Approve', 'pending'=>'Pending');
                 $name = ''; if (Input::has('name')){$title = Input::get('name');}
                 $status = ''; if (Input::has('status')){$status = Input::get('status');}
                 $tel = ''; if (Input::has('tel')){$tel = Input::get('tel');}

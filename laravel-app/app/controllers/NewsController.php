@@ -12,7 +12,7 @@ class NewsController extends \BaseController {
 	public function index()
 	{
         $inputs = Input::all();
-        $db = Article::orderBy('created_at', 'DESC')->where('status','approve')->where('type','news');
+        $db = Article::orderBy('created_at', 'DESC')->where('status','approve')->whereIn('type',array('news','feature'));
         if(Input::has('title')){
             $db->where('title', 'LIKE', "%".$inputs['title']."%");
         }

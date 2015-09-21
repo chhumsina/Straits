@@ -9,7 +9,7 @@
             <?php echo Form::open(array('url' => 'backend/service/edit', 'files'=> true)) ?>
             <?php
                 $types = array(''=>'Select Type','shipping_agency'=>'Shipping Agency', 'freight_forwarding'=>'Freight Forwarding','other_services'=>'Other Services');
-            $statuses = array(''=>'Select Status','approve'=>'Approve', 'pending'=>'Pending');
+            $statuses = array('approve'=>'Approve', 'pending'=>'Pending');
 
             $title = ''; if (Input::has('title')){$title = Input::get('title');}
             $status = ''; if (Input::has('status')){$status = Input::get('status');}

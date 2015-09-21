@@ -58,9 +58,9 @@ $baseUrl = URL::to('/');
 							<td>{{$item->created_at}}</td>
 							<td>
                                 @if($item->status == 'approve')
-                                    <a class="btn btn-default" href="{{$baseUrl}}/<?php if($item->type == 'news'){echo'latest-news';}else{echo'feature';}?>/detail/{{$item->slug}}" target="_blank"><span class="fa fa-eye"></span></a>
+                                    <a class="btn btn-default" href="{{$baseUrl}}/latest-news/detail/{{$item->slug}}" target="_blank"><span class="fa fa-eye"></span></a>
                                 @else
-                                    <a class="btn btn-default alertPending" href="{{$baseUrl}}/<?php if($item->type == 'news'){echo'latest-news';}else{echo'feature';}?>/detail/{{$item->slug}}" target="_blank"><span class="fa fa-eye"></span></a>
+                                    <a class="btn btn-default alertPending" href="{{$baseUrl}}/latest-news/detail/{{$item->slug}}" target="_blank"><span class="fa fa-eye"></span></a>
                                 @endif
                                 <a class="btn btn-default" href="{{$baseUrl}}/backend/news/edit/{{$item->id}}" ><span class="fa fa-edit"></span></a>
                                 <a class="btn btn-danger mgsDelete" href="{{$baseUrl}}/backend/news/delete/{{$item->id}}" ><span class="fa fa-remove">X</span></a>

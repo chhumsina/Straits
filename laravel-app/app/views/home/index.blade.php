@@ -65,7 +65,7 @@
     <div class="row sub_content">
         <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="dividerHeading">
-                <h4><span>About Us</span></h4>
+                <h4><span>Feature</span></h4>
             </div>
             <div class="row">
                 @foreach($about as $item)
