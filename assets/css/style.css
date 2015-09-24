@@ -142,7 +142,7 @@ a:hover{
     z-index:-1;
 }
 .home #rainy-container{
-    height: 450px;
+    height: 400px;
     overflow: hidden;
 }
 #background{
@@ -3937,5 +3937,31 @@ ul{
 }
 
 a {
-    color: #000000;
+    color: goldenrod;
+}
+
+.promo_box {
+    background: #f2f2f2 none repeat scroll 0 0;
+    border-left: 0 none;
+    box-shadow: 0 4px 7px #bbb;
+}
+
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus, .navbar-nav > li.active > a, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus{
+    background: #edb95a !important;
+}
+
+.dividerHeading h4, .widget_title h4{
+    border-bottom: 1px solid #edb95a;
+    color: #edb95a !important;
+}
+
+.hover-icon i::after {
+    background: #edb95a;
+}
+
+.top-info {
+    background: #edb95a;
+}
+#logo-bar {
+    background: #343434 none repeat scroll 0 0;
 }

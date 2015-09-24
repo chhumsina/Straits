@@ -10,12 +10,14 @@ $baseUrl = URL::to('/');
 
     <!-- CSS FILES -->
     <link rel="stylesheet" href="{{$baseUrl}}/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{$baseUrl}}/assets/css/slideshow.css">
     <!--<link rel="stylesheet" href="{{$baseUrl}}/assets/css/equal-height-columns.css">-->
     <link rel="stylesheet" href="{{$baseUrl}}/assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="{{$baseUrl}}/assets/css/style.css" media="screen" data-name="skins">
 
     <link href="{{$baseUrl}}/assets/css/fractionslider.css" rel="stylesheet" type="text/css">
     <link href="{{$baseUrl}}/assets/css/style-fraction.css" rel="stylesheet"  type="text/css">
+    <link href="{{$baseUrl}}/assets/plugin/card/flipout_cards.css" rel="stylesheet"  type="text/css">
 
     <link rel="stylesheet" type="text/css" href="{{$baseUrl}}/assets/css/switcher.css" media="screen" />
 

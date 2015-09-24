@@ -89,13 +89,10 @@ $baseUrl = URL::to('/');
 <script src="{{$baseUrl}}/assets/js/jquery.smartmenus.min.js"></script>
 <script src="{{$baseUrl}}/assets/js/jquery.smartmenus.bootstrap.min.js"></script>
 <script src="{{$baseUrl}}/assets/js/jquery-scrolltofixed-min.js"></script>
-<script charset="utf-8" type="text/javascript" src="{{$baseUrl}}/assets/js/jquery.fractionslider.js"></script>
-<script type="text/javascript" src="{{$baseUrl}}/assets/js/jquery.jcarousel.js"></script>
-<script type="text/javascript" src="{{$baseUrl}}/assets/js/jflickrfeed.js"></script>
-<script type="text/javascript" src="{{$baseUrl}}/assets/js/jquery.magnific-popup.min.js"></script>
 <script type="text/javascript" src="{{$baseUrl}}/assets/js/jquery.isotope.min.js"></script>
 <script type="text/javascript" src="{{$baseUrl}}/assets/js/swipe.js"></script>
-<script type="text/javascript" src="{{$baseUrl}}/assets/js/rainyday.js"></script>
+<script type="text/javascript" src="{{$baseUrl}}/assets/js/slideshow.js"></script>
+<script type="text/javascript" src="{{$baseUrl}}/assets/plugin/card/jquery.flipout_cards.js"></script>
 
 @if(Request::segment(2) == 'map')
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -111,42 +108,157 @@ $baseUrl = URL::to('/');
 
 <script src="{{$baseUrl}}/assets/js/main.js"></script>
 <script>
-    $(window).load(function(){
-        $('.slider').fractionSlider({
-            'fullWidth': 			true,
-            'controls': 			true,
-            'responsive': 			true,
-            'dimensions': 			"1920,335",
-            'increase': 			true,
-            'pauseOnHover': 		true,
-            'slideEndAnimation': 	true,
-            'autoChange':           true
-        });
-    });
-
-    /*                              Rainy-day
-     /*----------------------------------------------------------------*/
-    function run() {
-        var image = document.getElementById('background');
-        image.onload = function() {
-            var engine = new RainyDay({
-                element: image,
-                image: this
-            });
-            engine.trail = engine.TRAIL_SMUDGE;
-            //            engine.rain([ [1, 0, 30], [1, 2, 2] ],600);
-            engine.rain([ [0, 2, 200], [3, 3, 1] ], 100);
-        };
-        image.crossOrigin = 'anonymous';
-        image.src = 'assets/images/head-3.png';
-    }
-    window.onload = function() {
-        run();
-    };
-
     $(document).ready(function(){
         $('.<?php echo $url;?>').addClass('active');
+
+        $(".flipout").flipout_cards();
+
+        setInterval(function(){$(".flipout").trigger('mouseleave'); }, 10000);
+        setInterval(function(){$(".flipout").trigger('mouseenter'); }, 3000);
+
     });
+
+    /*
+     * Author:      Marco Kuiper (http://www.marcofolio.net/)
+     */
+
+    // Speed of the automatic slideshow
+    var slideshowSpeed = 6000;
+
+    // Variable to store the images we need to set as background
+    // which also includes some text and url's.
+    var photos = [ {
+        "image" : "1.png"
+    }, {
+        "image" : "2.png"
+    }, {
+        "image" : "3.png"
+    }
+    ];
+
+
+
+    $(document).ready(function() {
+
+        // Backwards navigation
+        $("#back").click(function() {
+            stopAnimation();
+            navigate("back");
+        });
+
+        // Forward navigation
+        $("#next").click(function() {
+            stopAnimation();
+            navigate("next");
+        });
+
+        var interval;
+        $("#control").toggle(function(){
+            stopAnimation();
+        }, function() {
+            // Change the background image to "pause"
+            $(this).css({ "background-image" : "url(images/btn_pause.png)" });
+
+            // Show the next image
+            navigate("next");
+
+            // Start playing the animation
+            interval = setInterval(function() {
+                navigate("next");
+            }, slideshowSpeed);
+        });
+
+
+        var activeContainer = 1;
+        var currentImg = 0;
+        var animating = false;
+        var navigate = function(direction) {
+            // Check if no animation is running. If it is, prevent the action
+            if(animating) {
+                return;
+            }
+
+            // Check which current image we need to show
+            if(direction == "next") {
+                currentImg++;
+                if(currentImg == photos.length + 1) {
+                    currentImg = 1;
+                }
+            } else {
+                currentImg--;
+                if(currentImg == 0) {
+                    currentImg = photos.length;
+                }
+            }
+
+            // Check which container we need to use
+            var currentContainer = activeContainer;
+            if(activeContainer == 1) {
+                activeContainer = 2;
+            } else {
+                activeContainer = 1;
+            }
+
+            showImage(photos[currentImg - 1], currentContainer, activeContainer);
+
+        };
+
+        var currentZindex = -1;
+        var showImage = function(photoObject, currentContainer, activeContainer) {
+            animating = true;
+
+            // Make sure the new container is always on the background
+            currentZindex--;
+
+            // Set the background image of the new active container
+            $("#headerimg" + activeContainer).css({
+                "background-image" : "url({{$baseUrl}}/assets/images/banner/" + photoObject.image + ")",
+                "display" : "block",
+                "background-size" : "100% 400px",
+                "z-index" : currentZindex
+            });
+
+            // Hide the header text
+            $("#headertxt").css({"display" : "none"});
+
+            // Set the new header text
+            $("#firstline").html(photoObject.firstline);
+            $("#secondline")
+                    .attr("href", photoObject.url)
+                    .html(photoObject.secondline);
+            $("#pictureduri")
+                    .attr("href", photoObject.url)
+                    .html(photoObject.title);
+
+
+            // Fade out the current container
+            // and display the header text when animation is complete
+            $("#headerimg" + currentContainer).fadeOut(function() {
+                setTimeout(function() {
+                    $("#headertxt").css({"display" : "block"});
+                    animating = false;
+                }, 500);
+            });
+        };
+
+        var stopAnimation = function() {
+            // Change the background image to "play"
+            //$("#control").css({ "background-image" : "url({{$baseUrl}}}/assets/images/btn_play.png)" });
+
+            // Clear the interval
+            clearInterval(interval);
+        };
+
+        // We should statically set the first image
+        navigate("next");
+
+        // Start playing the animation
+        interval = setInterval(function() {
+            navigate("next");
+        }, slideshowSpeed);
+
+    });
+
 </script>
 </body>
 </html>

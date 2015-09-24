@@ -2,6 +2,14 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/assets/css/font-awesome/css/font-awesome.min.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/css/slideshow.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/images/banner/1.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/images/banner/2.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/images/banner/3.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/images/banner/4.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/images/banner/5.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/images/banner/testr2.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/js/slideshow.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/assets/plugin/rte/editor.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/assets/plugin/rte/editor.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/laravel-app/.gitignore" charset="UTF-8" />
